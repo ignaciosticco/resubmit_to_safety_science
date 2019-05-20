@@ -59,14 +59,13 @@ Jamaraat Pilgrimage
 
 \section{\label{introduction}Introduction}
 
-\textcolor{red}{In the last decades many microscopic models 
-for crowd dynamics have been develop. One of the first model was developed by Hirai 
+\textcolor{red}{In the last decades, many microscopic models 
+for crowd dynamics have been developed. One of the first models was developed by Hirai 
 and Tarui (1975) introducing the class of \textit{force based} models 
-\cite{Hirai}. These models represents the interaction between 
-pedestrians and their environment through different kinds of forces. For 
-example, Okazaki (1979) simulated the movement of each pedestrian by the motion 
-of a magnetized object in magnetic field which exerts attractive force on the 
-different kind of magnetic poles \cite{Okazaki}.}\\
+\cite{Hirai}. These models represent the interaction between 
+pedestrians and their environment using different kinds of forces inspired in physical systems. For 
+example, Okazaki (1979) modeled the movement the pedestrians as the motion 
+of a magnetized object within a magnetic field \cite{Okazaki}.}\\
 
 \textcolor{red}{By the late '90s and the beginning of the century, Helbing 
 \textit{et al.} proposed a model that included socio-psychological and physical 
@@ -79,16 +78,6 @@ formalism of moving particles. The model succeeded at this instance to
 reproduce the slow down in the efficiency in the evacuation process as 
 pedestrians try harder to escape from a dangerous situation (\textit{i.e.} 
 ``faster is slower'' effect) \cite{Helbing1,Dorso1,Dorso2}.} \\ 
-
-\textcolor{blue}{By the late '90s and the beginning of the century, Helbing and 
-co-workers postulated that both the environment and the individuals' own desire 
-affect the pedestrians motion in a similar way as forces do with respect to the 
-momentum of particles \cite{Helbing1,Helbing4}. This ``Social Force Model'' 
-(SFM) nicely bridged the socio-psychological phenomenon of crowds 
-behavior to the ``microscopic'' formalism of moving particles. The model 
-succeeded at this instance to explain why the crowd evacuation slows down 
-as pedestrians try harder to escape from a dangerous situation 
-(\textit{i.e.} ``faster is slower'' effect) \cite{Helbing1,Dorso1,Dorso2}.} \\
 
 The SFM, in its basic version, was reported to be suitable for describing, 
 at least qualitatively, a variety of emergency situations, including the presence
@@ -278,7 +267,7 @@ while flow is determined according to the fluid-dynamic formula
 \end{equation}
 
 It is well known that the \textcolor{red}{original} version of the Social Force 
-Model \textcolor{red}{\cite{Helbing1}} is incapable of reproducing the 
+Model \textcolor{red}{\cite{parisi2}} is incapable of reproducing the 
 fundamental diagram at high densities (say above 
 \textcolor{red}{5~p~m$^{-2}$)}. Different 
 approaches were proposed to fix this drawback: increasing the net-time 
@@ -297,7 +286,7 @@ force nor being captured by an attraction. \\
 The circles represent pedestrians moving from left to right. $w$ represents the 
 corridor width, $L$ represents the length. The rectangular boxes are upper and 
 lower blocks that represent the walls of the corridor. The dashed circle in the 
-middle corresponds to the measurement region.}
+middle corresponds to the \textcolor{red}{fundamental diagram} measurement region.}
 \end{figure}
 
 \subsection{\label{granular-cluster} Clustering structures}
@@ -518,7 +507,7 @@ profile in order to investigate this discrepancy.
 
 \subsection{\label{velocity_profile} Velocity profile}
 
-As we mentioned in Section \ref{fundamental_diagram}, when the density is low, pedestrians achieve the desired velocity ($v=v_d=1$~m/s). Since the results of the previous Section only hold for the area located in the middle of the corridor (see Fig.~\ref{corridor}), we want to shed some light and understand what is happening across the entire corridor.\\
+As we mentioned in Section \ref{fundamental_diagram}, when the density is low, pedestrians achieve the desired velocity ($v=v_d=1$~m/s). Since the results of the previous Section only hold for the area located in the middle of the corridor (see \textcolor{red}{dashed circle in} Fig.~\ref{corridor}), we want to shed some light and understand what is happening across the entire corridor.\\
 
 Fig.~\ref{speed-profile-w22} shows the velocity profile (velocity vs. \textit{y}-location) of the pedestrians across the corridor (see caption for details). We can see that low-density situations lead to a cruising velocity profile $v=v_d$. This is valid for every location in the corridor (not only the center as was previously noticed in Section \ref{fundamental_diagram}). For higher densities, the velocity profile turns into a parabola-like function. This shape resembles the usual velocity profile for laminar flow in a viscous fluid, where the velocity increases toward the center of a tube. In our case, pedestrians near the walls are the ones with the lower velocity. The velocity increases when departing from the wall until it reaches the maximum at the center of the corridor. This behavior suggests that the wall friction on the pedestrians, is playing a relevant role on the velocity distribution.\\
 
