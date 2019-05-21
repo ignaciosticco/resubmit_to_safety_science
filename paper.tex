@@ -369,7 +369,10 @@ recorded every 0.05~s, that is, at intervals as short as 10\% of the
 pedestrian’s relaxation time (see Section. \ref{sfm}). The recorded magnitudes 
 were the pedestrian’s positions and velocities for each process. We also 
 computed the clustering structures using a LAMMPS built in function 
-\textcolor{blue}{(named compute cluster-atom)}}.\\
+named compute cluster-atom. This function assigns each pedestrian a cluster ID.
+A cluster is defined as a set of pedestrians, each of which is within the cutoff
+distance from one or more other pedestrians in the cluster. 
+If a pedestrian has no neighbors within the cutoff distance, then it is a 1-pedestrian cluster.}\\
 
 
 
