@@ -105,7 +105,7 @@ environment, nor it fits accurately the empirical velocities reported for
 crowds under normal conditions. \cite{Lakoba}.  \\
 
 Researchers turned back to examine the available data on the velocity and flux 
-behavior for different density environments \cite{helbing3,seyfried,seyfried1}. 
+behavior for different density environments \cite{Boltes,helbing3,seyfried,seyfried1}. 
 Ref.~\cite{helbing3} \textcolor{red}{summarizes} empirical data from 
 literature, and their own data set, acquired from videos of the Muslim 
 pilgrimage in Mina-Makkah (2006). They showed from the empirical fundamental 
@@ -179,7 +179,7 @@ willingness. The corresponding expression for this forces is
 \begin{equation}
         \mathbf{f}_d^ {(i)}(t) =  
 m_i\,\displaystyle\frac{v_d^{(i)}\,\mathbf{e}_d^
-{(i)}(t)-\mathbf{v}^{(i)}(t)}{\tau} \label{desired}
+{(i)}(t)-\mathbf{v}^{(i)}(t)}{\tau}, \label{desired}
 \end{equation}
 
 where $m_i$ is the mass of the pedestrian $i$. $\mathbf{e}_d$ 
@@ -194,7 +194,7 @@ The ``social force'' represents the psychological tendency of any two pedestrian
 say $i$ and $j$, to stay away from each other. It is represented by a repulsive interaction force 
 
 \begin{equation}
-        \mathbf{f}_s^{(ij)} = A_i\,e^{(R_{ij}-r_{ij})/B_i}\mathbf{n}_{ij} 
+        \mathbf{f}_s^{(ij)} = A_i\,e^{(R_{ij}-r_{ij})/B_i}\mathbf{n}_{ij}, 
         \label{social}
 \end{equation}
 
@@ -211,7 +211,7 @@ Its mathematical expression reads
 \begin{equation}
         \mathbf{f}_g^{(ij)} = 
 \kappa\,(R_{ij}-r_{ij})\,\Theta(R_{ij}-r_{ij})\,\Delta
-\mathbf{v}^{(ij)}\cdot\mathbf{t}_{ij} 
+\mathbf{v}^{(ij)}\cdot\mathbf{t}_{ij}, 
         \label{granular}
 \end{equation}
 
@@ -229,7 +229,7 @@ current velocity. The equation of motion for pedestrian $i$ reads
 m_i\,\displaystyle\frac{d\mathbf{v}^{(i)}}{dt}=\mathbf{f}_d^{(i)}
 +\displaystyle\sum_{j=1}^{N}\displaystyle\mathbf{f}_s^{(ij)}
 +\displaystyle\sum_ {
-j=1}^{N}\mathbf{f}_g^{(ij)}\label{eq_mov}
+j=1}^{N}\mathbf{f}_g^{(ij)},\label{eq_mov}
 \end{equation}
 
 where the subscript $j$ represents all the other pedestrians 
@@ -244,13 +244,13 @@ Inspired from vehicular traffic dynamic studies, many researches on pedestrian d
 We follow the same definition as in Ref.~\cite{helbing3} regarded to the fundamental diagram analysis. That is, we mean by the local density at place $\vec{r}=(x,y)$ and time $t$ the following expression
 
 \begin{equation}
-\rho(\vec{r},t)=\sum_{j}f(\vec{r}_j(t)-\vec{r}) \label{ec-density}
+\rho(\vec{r},t)=\sum_{j}f(\vec{r}_j(t)-\vec{r}), \label{ec-density}
 \end{equation}
 
 where function $f(\vec{r}_j(t)-\vec{r})$ is a Gaussian distance-dependent weight function defined as
 
 \begin{equation}
-f(\vec{r}_j-\vec{r})=\frac{1}{\pi R^2}\exp[-\left \| \vec{r}_j-\vec{r} \right \|^2/R^2] \label{ec-f}
+f(\vec{r}_j-\vec{r})=\frac{1}{\pi R^2}\exp[-\left \| \vec{r}_j-\vec{r} \right \|^2/R^2]. \label{ec-f}
 \end{equation}
 
 $\vec{r}_j(t)$ are the positions of the pedestrians $j$ in the surroundings of $\vec{r}$ and $R$ is a parameter that ponders more significantly to the pedestrians inside the circle shown in Fig.~\ref{corridor} . 
@@ -295,7 +295,7 @@ A characteristic feature of pedestrian dynamics is the formation of clusters. Cl
 be defined as the set of individuals that for any member of the group (say, $i$) there exists at least another member belonging to the same group ($j$) in contact with the former. Thus, we define a ``granular cluster'' ($C_g$) following the mathematical formula given in Ref.~\cite{Dorso1}
 
 \begin{equation}
-C_g:P_i~\epsilon~ C_g \Leftrightarrow \exists~ j~\epsilon~C_g / r_{ij} < (R_i+R_j) \label{ec-cluster}
+C_g:P_i~\epsilon~ C_g \Leftrightarrow \exists~ j~\epsilon~C_g / r_{ij} < (R_i+R_j), \label{ec-cluster}
 \end{equation}
 
 where ($P_i$) indicate the \textit{ith} pedestrian and $R_i$ is his (her) radius 
@@ -371,10 +371,10 @@ were the pedestrian’s positions and velocities for each process. We also
 computed the clustering structures using a LAMMPS built in function 
 \textcolor{blue}{(named compute cluster-atom)}}.\\
 
-\section{\label{results}Results}
 
 
-\subsection{\label{Hypotheses} Hypotheses}
+
+\section{\label{Hypotheses} \textcolor{red}{Hypotheses}}
 
 We stress the fact that our investigation focuses on moving
 pedestrians in a highly dense situation (say, the one experienced at
@@ -438,6 +438,9 @@ boundary conditions (say, no limiting walls) since the boundary is a
 key feature of collective motion. Nevertheless, our results accomplish
 the available data on the Hajj pilgrimages \cite{helbing3,lohner1}.
 
+
+
+\section{\label{results}Results}
 
 
 \subsection{\label{fundamental_diagram} Fundamental diagram in the original model}
@@ -778,7 +781,7 @@ be defined as follows\\
          && \\
          \mathbf{f}_g' & = & 
 \mathcal{K}\,(2r'-d')\,\Theta(2r'-d')\,(\Delta\mathbf{v}'\cdot\hat{\mathbf{t}})\
-, 
+ 
 \hat{\mathbf{t}} \\
         \end{array}\right.\label{eqn_appendix_2}
 \end{equation}
@@ -833,7 +836,7 @@ relevant forces.}
  
 \begin{equation}
 \displaystyle\frac{dv'}{dt'}(y')=1-v'(y')+f_g'(y'+\delta 
-y')-f_g'(y'-\delta y')\label{eqn_appendix_2:1}
+y')-f_g'(y'-\delta y'),\label{eqn_appendix_2:1}
  \end{equation}
 
 where $v'(y')$ corresponds to the (reduced) velocity (for the $x$-direction) of 
