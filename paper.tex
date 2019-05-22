@@ -83,7 +83,7 @@ The SFM, in its basic version, was reported to be suitable for describing,
 at least qualitatively, a variety of emergency situations, including the presence
 of obstacles, or the existence of more than one exit \cite{Dorso3,Dorso5}.
 More sophisticated scenarios required, however, a step up implementation
-\cite{Dorso4,Dorso6,Cornes1}, although sustaining the basic model and its parameters.  \\
+\cite{Cornes1,Dorso4,Dorso6}, although sustaining the basic model and its parameters.  \\
 
 In the last years several extensions of the Social Force Model have been 
 proposed. These extensions solve numerical pitfalls \cite{koster1} 
@@ -105,12 +105,12 @@ environment, nor it fits accurately the empirical velocities reported for
 crowds under normal conditions. \cite{Lakoba}.  \\
 
 Researchers turned back to examine the available data on the velocity and flux 
-behavior for different density environments \cite{Boltes,helbing3,seyfried,seyfried1}. 
+behavior for different density environments \cite{Boltes,helbing3,seyfried1,seyfried}. 
 Ref.~\cite{helbing3} \textcolor{red}{summarizes} empirical data from 
 literature, and their own data set, acquired from videos of the Muslim 
 pilgrimage in Mina-Makkah (2006). They showed from the empirical fundamental 
 diagram (flux $J$ versus density $\rho$) that highly dense crowds (seemingly up 
-to $10\,$p/m$^2$) do not drive the pedestrians velocity to zero, although the 
+to $10\,$p~m$^{-2}$) do not drive the pedestrians velocity to zero, although the 
 reasons for this remain rather obscure.   \\
 
 The high density regime appears to be the most cumbersome one. Caution was 
@@ -332,7 +332,7 @@ pedestrian-pedestrian friction coefficient and the pedestrian-wall friction
 coefficient, respectively. \\
 
 The desired velocity for each pedestrian $i$ was 
-$\vec{v}_d^{~(i)}=1$~m/s~$\hat{e}_d^{~(i)}$, where the target $\hat{e}_d^{~(i)}$ 
+$\vec{v}_d^{~(i)}=1$~m~s$^{-1}$~$\hat{e}_d^{~(i)}$, where the target $\hat{e}_d^{~(i)}$ 
 was set as $\hat{e}_d^{~(i)}=(L,y_i)\left \| (L,y_i) \right \|^{-1}$, being $L$ 
 the \textit{x}-location of the end at the corridor and $y_i$ the 
 \textit{y}-location corresponding to the \textit{ith} pedestrian 
@@ -355,7 +355,7 @@ has units $\left [ \kappa \right]=$Kg~m$^{-1}$~s$^{-1}$, the density $\left [
 simulator with parallel computing capabilities \cite{plimpton}. The time 
 integration algorithm followed the velocity Verlet scheme with a time step of 
 $10^{-4}$~s. All the necessary parameters were set to the same values as in 
-previous works (see Refs. \cite{sticco,Dorso5}), except for the friction 
+previous works (see Refs. \cite{Dorso5,sticco}), except for the friction 
 coefficient $\kappa$.} \\
 
 \textcolor{red}{We implemented special modules in C++ for upgrading the LAMMPS 
@@ -399,7 +399,7 @@ dynamics behind the pedestrians interactions and behaviors" \cite{johansson}.\\
 
 Researchers propose a ``re-calibration" of the (basic) SFM, in order to
 attain ``stop-and-go" flows for highly dense crowds
-\cite{yu1,johansson}. Presumably, this kind of instabilities within the crowd prevent
+\cite{johansson,yu1}. Presumably, this kind of instabilities within the crowd prevent
 people from stopping at extremely high densities. The intended
 ``re-calibration" consist on either enhancing the (local) social
 interactions or increasing the net-time headway (roughly, the
@@ -429,7 +429,7 @@ hypothesis, however, does not focus on the crowd socio-psychological
 response, but on the physical contact among pedestrians (and the
 walls). The socio-psychological attitude of the pedestrians will be
 assumed to remain fixed along the simulations (with the 
-\textcolor{red}{desired speed} limited to $v_d=1\,$m/s). \\
+\textcolor{red}{desired speed} limited to $v_d=1\,$ m~s$^{-1}$). \\
 
 
 Our investigation appears somewhat restricted to the (almost)
@@ -459,7 +459,7 @@ On the other hand, we have the congested branch  for $\rho > 5$. Here we face tw
 \item[(ii)] For wide corridors (say $w > 15$) we see that the flow increases with density. This contradicts the typical behavior of the fundamental diagram.   
 \end{itemize}
 
-In the case of narrow corridors, both the simulated case and the empirical results converge to a constant flow value. It is remarkable that the system does not reach a freezing state such as the one reported in Refs.\cite{lin,kwak}. Recall that our simulations do not include any respect factor (see Ref.\cite{parisi2}), or changes in the net-time headway (Ref.\cite{helbing3}), or the urge to see an attraction (Ref.\cite{kwak}). We assume a well defined target and the same $v_d$ for all the pedestrians.\\
+In the case of narrow corridors, both the simulated case and the empirical results converge to a constant flow value. It is remarkable that the system does not reach a freezing state such as the one reported in Refs.\cite{kwak,lin}. Recall that our simulations do not include any respect factor (see Ref.\cite{parisi2}), or changes in the net-time headway (Ref.\cite{helbing3}), or the urge to see an attraction (Ref.\cite{kwak}). We assume a well defined target and the same $v_d$ for all the pedestrians.\\
 
 The inset in Fig.~\ref{fundamental_diagram_flow} corresponds to the empirical data from Helbing (\cite{helbing3}). at the entrance of the Jamaraat bridge (the corridor width was $w=22$~m). Notice that our simulated results corresponding to a $w=22$~m corridor, exhibit a different behavior along the congested regime. In the simulated case, the flow increases even for the greatest explored density. On the contrary, the empirical data exhibit a flow reduction for $\rho > 5$ until reaching a plateau for the highest explored density values.  \\
 
@@ -473,12 +473,12 @@ In order to fulfill the experimental fundamental diagram, it becomes necessary t
 \textcolor{red}{v(\rho_{max}) < \frac{5v_d}{\rho_{max}} \leq \frac{5}{9} v_d}\\
 \end{equation}
 
-As our desired velocity is fixed at $v_d = 1$~m/s, we conclude that the speed at 
-the maximum density has to be bounded by $v(\rho_{max}) \lesssim  0.5$~m/s in 
+As our desired velocity is fixed at $v_d = 1$~m~s$^{-1}$, we conclude that the speed at 
+the maximum density has to be bounded by $v(\rho_{max}) \lesssim  0.5$~m~s$^{-1}$ in 
 order to satisfy the qualitative behavior of the (experimental) fundamental 
 diagram reported in the literature.\\
 
-The above reasoning is consistent with the speed-density results shown in Fig.~\ref{fundamental_diagram_speed}. As a visual guide we plotted $v=0.5$~m/s with a horizontal dashed line. The close examination of $\rho_{max} = 9$ shows that values corresponding to the wide corridors ($w=15$~m and $w=22$~m) exceed $v=0.5$~m/s. But, those values corresponding to narrow corridors fall below $v=0.5$~m/s. \\
+The above reasoning is consistent with the speed-density results shown in Fig.~\ref{fundamental_diagram_speed}. As a visual guide we plotted $v=0.5$~m~s$^{-1}$ with a horizontal dashed line. The close examination of $\rho_{max} = 9$ shows that values corresponding to the wide corridors ($w=15$~m and $w=22$~m) exceed $v=0.5$~m~s$^{-1}$. But, those values corresponding to narrow corridors fall below $v=0.5$~m~s$^{-1}$. \\
 
 \begin{figure}[htbp!]
 \centering
@@ -491,7 +491,7 @@ of the corridor once the system reached the stationary state (see Fig.~\ref{corr
 was $L=$28~m for all cases (with periodic boundary conditions in the \textit{x} direction).}
 \end{figure}
 
-The results shown in Fig.~\ref{fundamental_diagram_speed} confirm the fact that when the density is low enough, pedestrians manage to walk at the desired velocity ($v=v_d=1$~m/s). Above $\rho>5$, however, the velocity begins to slow down. The inset shows the experimental data at the entrance of the Jamaraat bridge. We may conclude that our simulations agree with the experimental data for narrow corridors, but disagree as these become wider. The wider the corridor, the greater the velocity for all the density values explored. In Section \ref{velocity_profile} we will further discuss this topic.\\
+The results shown in Fig.~\ref{fundamental_diagram_speed} confirm the fact that when the density is low enough, pedestrians manage to walk at the desired velocity ($v=v_d=1$~m~s$^{-1}$). Above $\rho>5$, however, the velocity begins to slow down. The inset shows the experimental data at the entrance of the Jamaraat bridge. We may conclude that our simulations agree with the experimental data for narrow corridors, but disagree as these become wider. The wider the corridor, the greater the velocity for all the density values explored. In Section \ref{velocity_profile} we will further discuss this topic.\\
 
 It should be pointed out that the Jamaraat data does not a exhibit a ``really" constant velocity for low densities. But this seems reasonable since our simulations do not include the complexities of the real situation when the density is low. We will not analyze this phenomenon in this investigation. \\
 
@@ -513,7 +513,7 @@ profile in order to investigate this discrepancy.
 
 \subsection{\label{velocity_profile} Velocity profile}
 
-As we mentioned in Section \ref{fundamental_diagram}, when the density is low, pedestrians achieve the desired velocity ($v=v_d=1$~m/s). Since the results of the previous Section only hold for the area located in the middle of the corridor (see \textcolor{red}{dashed circle in} Fig.~\ref{corridor}), we want to shed some light and understand what is happening across the entire corridor.\\
+As we mentioned in Section \ref{fundamental_diagram}, when the density is low, pedestrians achieve the desired velocity ($v=v_d=1$~m~s$^{-1}$). Since the results of the previous Section only hold for the area located in the middle of the corridor (see \textcolor{red}{dashed circle in} Fig.~\ref{corridor}), we want to shed some light and understand what is happening across the entire corridor.\\
 
 We first noticed that low-density situations ($\rho<5$) lead to a cruising velocity profile $v=v_d$. This is valid for every location in the corridor (not only the center as was previously noticed in Section \ref{fundamental_diagram}). For higher densities($\rho>5$), the velocity profile turns into a parabola-like function. This shape resembles the usual velocity profile for laminar flow in a viscous fluid, where the velocity increases toward the center of a tube. In our case, pedestrians near the walls are the ones with the lower velocity. The velocity increases when departing from the wall until it reaches the maximum at the center of the corridor. This behavior suggests that the wall friction on the pedestrians, is playing a relevant role on the velocity distribution.\\
 
@@ -541,7 +541,7 @@ W^{(i)}(t) \simeq \left [ \vec{f}^{(i)}(t+\Delta t) + \vec{f}^{(i)}(t)  \right ]
 
 Once the work on every pedestrian is calculated, we proceed to bin the corridor into a squared grid of 1~m$\times$1~m cells in order to associate the work values with the corresponding spacial location. Fig.~\ref{abswg} shows three color maps of the absolute value of the work done by the friction force. The horizontal and vertical axis represent the $x$-location and $y$-location of the corridor respectively. The color map associates higher work values with red colors and lower work for blue colors. The walls are located at $y=0$ and $y=w$ (bottom and top of each figure). Fig.~\ref{abswg_width10} corresponds to a 10 m width corridor, Fig.~\ref{abswg_width15} corresponds to a 15 m width corridor and Fig.~\ref{abswg_width22} corresponds to a 22 m width corridor.\\
 
-In the three figures we observe a similar pattern: the regions near the walls (bottom and top) are the most dissipative ones. The center of the corridor is though not a very dissipative region. Furthermore, the work seems to increase with the corridor width. This occurs because the relative velocity between pedestrians is greater in the wide corridors than in narrow ones. This can be checked by comparing the slopes between parabolas in Fig.~\ref{speed-profile-multi_width}. As can be seen there, the wider the corridor, the greater the slope (corresponding to locations near the wall).\\
+In the three figures we observe a similar pattern: the regions near the walls (bottom and top) are the most dissipative ones. The center of the corridor is though not a very dissipative region. Furthermore, the work seems to increase with the corridor width. This occurs because the relative velocity between pedestrians is greater in the wide corridors than in narrow ones. The wider the corridor, the greater the slope (corresponding to locations near the wall).\\
 
 Recall from Eq.(\ref{granular}), that the friction force depends on the compression and the relative velocity among pedestrians. The compression levels remain the same in the three cases since the compression only depends on the density (which is fix at $\rho=6$ for the three color maps). Thus, the differences between Figs.~\ref{abswg_width10}, \ref{abswg_width15} and \ref{abswg_width22} can only explained by the increment of the relative velocity between individuals. \\
 
@@ -550,7 +550,7 @@ Recall from Eq.(\ref{granular}), that the friction force depends on the compress
     \subfloat[]{\includegraphics[width=0.5\columnwidth]{./abswg_width10.eps}\label{abswg_width10}}\\ 
     \subfloat[]{\includegraphics[width=0.5\columnwidth]{./abswg_width15.eps}\label{abswg_width15}}\\
     \subfloat[]{\includegraphics[width=0.5\columnwidth]{./abswg_width22.eps}\label{abswg_width22}}\
-\caption[width=0.47\columnwidth] {Color map for the absolute value of the work done by the friction. The density chose was $\rho=6$. (a) Corresponds to $w=$10~m (b) $w=$15~m and (c) $w=$22~m. The axis represent the location in the corridor ($x$ and $y$). The scale bar on the right is expressed in Joule units. The work was numerically integrated following the Trapezoidal rule with $\Delta t =0.05$~s. The pedestrians desired velocity was $v_d = 1$~m/s. The contour lines were computed on a square grid of 1m$\times$~1m and then splined to get smoother curves.} 
+\caption[width=0.47\columnwidth] {Color map for the absolute value of the work done by the friction. The density chose was $\rho=6$. (a) Corresponds to $w=$10~m (b) $w=$15~m and (c) $w=$22~m. The axis represent the location in the corridor ($x$ and $y$). The scale bar on the right is expressed in Joule units. The work was numerically integrated following the Trapezoidal rule with $\Delta t =0.05$~s. The pedestrians desired velocity was $v_d = 1$~m~s$^{-1}$. The contour lines were computed on a square grid of 1m$\times$~1m and then splined to get smoother curves.} 
 \label{abswg}
 \end{figure}
 
@@ -643,7 +643,7 @@ two coefficients is increased. Notice that there is not a big difference between
 \centering
 \includegraphics[width=0.7\columnwidth]
 {./fracc_clusteriz_vs_density.eps}
-\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m/s. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
+\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m~s$^{-1}$. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
 \end{figure}
 
 Two main conclusions can be outlined from the above
@@ -777,6 +777,11 @@ Notice that $\mathcal{A}$ and $\mathcal{K}$ are actually the only two
 control parameters in Eq.~(\ref{eqn_appendix_1}) for identical 
 pedestrians. The ratio $\tau/m$ is common to both, but the magnitudes 
 $Av_d^{-1}$ and $\kappa B$ handle each parameter separately.\\
+
+\textcolor{red}{We interpret $\mathcal{A}$ as a parameter related exclusively to the 
+repulsion between pedestrians and $\mathcal{K}$  as parameter related to the friction-repulsion.
+While the former is valid in every situation, the latter only takes part when the
+pedestrians are in contact.}\\
 
 The fact that $\mathcal{A}$ and $\mathcal{K}$ share the parameter $\tau$ is 
 in agreement with the conclusions outlined in Ref.~\cite{johansson}. The 
@@ -945,7 +950,7 @@ Another pedestrian dynamics phenomenon is the lane formation reported in bidirec
 \centering
 \includegraphics[width=0.7\columnwidth]
 {./fis_kx10.eps}
-\caption{\label{fis} Mean evacuation time (seconds) vs. the pedestrian’s desired velocity (m/s). The room was 20 m $\times$ 20 m size. Mean values were computed from 30 evacuation processes. The pedestrians were initially placed in a regular square arrangement along the room with random velocities, resembling a Gaussian distribution with null mean value. The friction coefficient was $\kappa=2.4\times10^{6}$. The inset shows the evacuation time vs the desired velocity for the friction coefficient corresponding to the original model ($\kappa=2.4\times10^{5}$).  }
+\caption{\label{fis} Mean evacuation time (seconds) vs. the pedestrian’s desired velocity (m~s$^{-1}$). The room was 20 m $\times$ 20 m size. Mean values were computed from 30 evacuation processes. The pedestrians were initially placed in a regular square arrangement along the room with random velocities, resembling a Gaussian distribution with null mean value. The friction coefficient was $\kappa=2.4\times10^{6}$. The inset shows the evacuation time vs the desired velocity for the friction coefficient corresponding to the original model ($\kappa=2.4\times10^{5}$).  }
 \end{figure}
 
 Fig.~\ref{rate_fis} exhibits the ratio between the evacuation time with for the friction modified model and the evacuation time for the original model. This ratio is shown as a function of the desired velocity. As the desired velocity increases, the rate of evacuation times approaches a constant value $\sim$ 9. This result is in agreement with the formula Eq.(9) in Ref.\cite{sticco}. The friction force dominates in the range of high desired velocities since it promotes the collisions between pedestrians. within this regime, the Eq. (9) of  Ref. \cite{sticco} becomes a good approximation of the evacuation time. Thus, it is reasonable that dividing $t_e$ (for the enhanced friction) by $t_e$ (for the original model) yields a constant value for high $v_d$.  
