@@ -65,7 +65,7 @@ plt.plot(density_kx10,flow_kx10,'-rs',mew=0.7,markersize=4,label='$\\kappa_w=\\k
 
 pylab.grid(False)
 #pylab.xlabel('time~$(s)$')
-pylab.xlabel('Density~(p~/m$^{2}$)')
+pylab.xlabel('Density~(p~m$^{-2}$)')
 pylab.ylabel('Flow~(p~m$^{-1}$s$^{-1}$)')
 #pylab.legend()
 #pylab.ylim(0.0, 60.0)

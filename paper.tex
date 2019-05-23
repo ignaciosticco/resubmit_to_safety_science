@@ -154,8 +154,7 @@ Section~\ref{sfm}, while including the precise definitions for flux, density
 and clustered structures. Section~\ref{simulations} presents our numerical 
 simulations for pedestrians moving through corridors. The corresponding results 
 are shown in Section~\ref{results}. Our main conclusions are detailed in the 
-closing Section~\ref{conclusions}. A complementary simple model for pedestrians 
-moving through a corridor has been included in the Appendix. \\     
+closing Section~\ref{conclusions}.\\     
 
 
 \section{\label{background}Background}
@@ -413,7 +412,7 @@ media exists \cite{helbing3}.\\
 We show that the experimental data (say, the flux-density diagram) can be 
 modeled under quasi-stationary conditions in the high density regime. Our 
 starting point is the re-examination of the (basic) SFM. We hypothesize that two
-control parameters, $\mathcal{A}$ and $\mathcal{K}$ (see \ref{appendix_1}) may handle
+control parameters, $\mathcal{A}$ and $\mathcal{K}$ (see Section \ref{appendix_1}) may handle
 the collective motion in dense crowds. We presume that physical contact is
 a key feature in dense crowds, despite the fact that other issues may
 also contribute to the flow reduction \cite{johansson1}. However, the latter could
@@ -554,181 +553,10 @@ Recall from Eq.(\ref{granular}), that the friction force depends on the compress
 \label{abswg}
 \end{figure}
 
-The above observations drive the following conclusion. The maximum attainable velocity $v_{max}$ accomplishes a maximum velocity slope (with its associated friction dissipation). Both the friction with the walls and the friction between the pedestrians appear as relevant magnitudes for properly slowing down the crowd velocity, in order to fit the experimental data. \ref{appendix_2} supports this assertion with a simple example.  
-
-\subsection{Friction modification}
-
-As already mentioned, the results shown so far indicate that friction may be the 
-key magnitude for fitting the fundamental diagram into the experimental data. We 
-want to make clear that fitting the experimental data means mimicking 
-(qualitatively) the congested regime reported by different authors (including 
-the Jamaraat study in Ref.~\cite{helbing3}) for corridors as width as 22~m. The 
-\textcolor{red}{original} version of the Social Force Model proposes the same 
-friction coefficient for the pedestrian-pedestrian interaction and the 
-pedestrian-wall interaction. The proposed value was $\kappa = 2.4\times10^{5}$. 
-This value is widely used in many studies.  \\
-
-We tested the friction coefficient modification in \ref{appendix_2} and we found that the fundamental diagram experiences a qualitatively change when the friction coefficient $\kappa$ is varied. We further performed numerical simulations in the context of the SFM. We call $\kappa_i$ as the friction coefficient of the pedestrian-pedestrian interaction and $\kappa_w$ as the friction coefficient of the pedestrian-wall interaction. Fig.~\ref{fgmodified-w22} shows the flow vs density for different values of $\kappa_i$ and $\kappa_w$.\\
-
-The triangular symbols in Fig.~\ref{fgmodified-w22} correspond to the increase in one order of magnitude of the wall friction (now $\kappa_w = 2.4\times10^{6}$), leaving the pedestrian-pedestrian friction unchanged (\textit{i.e.}, $\kappa_i = 2.4\times10^{5}$). We can see that the flow reduces a little bit, but this is not enough to change significantly the congested regime. \\
-
-The circles in Fig.~\ref{fgmodified-w22} correspond to a modification of the friction between pedestrians without changing the value of the wall friction. We increased the pedestrian-pedestrian friction by a factor of ten ($\kappa_i = 2.4\times10^{6}$). Here we see a significant reduction of the flow. The qualitative behavior resembles the fundamental diagram reported by Helbing \textit{et al}. with a well defined congested regime for the greatest densities.\\
-
-We also tested the case were both friction coefficients surpass ten times the value of the original model (now $\kappa_w = \kappa_i = 2.4\times10^{6}$). The squared symbols represent this scenario. As expected, the flow reduces significantly respect the original case (cross symbol). Interestingly, the reduction of the flow is more than the reduction due to the increment of $\kappa_i$ plus the reduction of the flow due to $\kappa_w$. This behavior is indicative that the superposition principle does not hold in this system because of the non-linearity of the equation of motion.     \\
-
-This finding allows us to affirm that the friction plays a crucial role in the functional behavior of the fundamental diagram. The increment of both individual-individual friction and wall friction are determinant in order to achieve a congested regime. More specifically, the empirical behavior for the fundamental diagram can be achieved by properly increasing the friction coefficients. In \ref{appendix_3} we show that the friction modification does not alter already studied behaviors of pedestrian dynamics.\\
-
-Recall that other authors address the ``congested regime problem" by modifying different aspects of the model. Ref.~\cite{parisi2} imposes zero desired velocity once pedestrians are close enough, Ref.~\cite{johansson} increases the relaxation time in order to slow down the net-time headway, and more recently,  Ref.~\cite{kwak} induce the jamming transition by an attraction. Many of these approaches seem to be equivalent. In \ref{appendix_1} we discuss about how the modification of the relaxation time and the increment of the friction coefficient yield a similar effect, since both affect the same term in the reduced-in-units equation of motion.  The relaxation time, however, also affects the social interactions (see Section \ref{Hypotheses} and \ref{appendix_1}).   \\
-
-We claim that in real scenarios, a combination of all these factors may be the cause of the marked flow reduction that portray the fundamental diagram. The pedestrians path can be very complex even if it is a simple enclosure (straight corridor) and the target is well defined (unidirectional flow). Beyond the complexities given by the internal motivations of pedestrians, we strongly suggest studying and modeling coefficients of friction between individuals and the friction with the walls. These two parameters have shown to be very important in the pedestrian dynamics and deserve a closer inspection in future research.\\
-
-We want to emphasize that the proposals stated in Refs.~\cite{parisi2,johansson,kwak}  only apply under normal conditions. If a crowd is under high levels of anxiety, pedestrians will neither keep distance between each other, nor will feel the urge to see an ``attraction". Thus, studying the friction coefficients may be a critical factor to properly reproduce the dynamics of a massive evacuation under stress.\\
-
-With all these insights, we can say that the narrow corridors have no drawback in the fitting of the flow vs. density relation because very high velocities are not attainable. This happens because in narrow corridors, the friction of the walls has a lot of ``relative weight" in the overall friction of the system. 
-The friction exerted by the walls is fundamental in order to produce the parabolic shape of the velocity profile. The walls provide friction force in the opposite direction to the speed of the individual (drag backwards), since they act like a fixed pedestrian. In other ways, friction between pedestrians can produce either drag forward or drag backwards depending on the contacting pedestrians velocities (see Eq.~\ref{granular}).\\
+The above observations drive the following conclusion. The maximum attainable velocity $v_{max}$ accomplishes a maximum velocity slope (with its associated friction dissipation). Both the friction with the walls and the friction between the pedestrians appear as relevant magnitudes for properly slowing down the crowd velocity, in order to fit the experimental data. Section \ref{appendix_2} supports this assertion with a simple example.  
 
 
-\begin{figure}[htbp!]
-\centering
-\includegraphics[width=0.7\columnwidth]
-{./flow-density_pasillo22m_fgmodified_multi.eps}
-\caption{\label{fgmodified-w22} Fundamental diagram (flow vs density) for different friction coefficient (see legend for the corresponding values). The simulated corridor was 28~m length. Pedestrians walk from left to right with periodic boundary condition in the $x$-direction. Initially, pedestrians were randomly distributed. For each density, we measure the flow once the system reaches the stationary state.}
-\end{figure}
-
-In this subsection we have shown that an adequate modification of the friction coefficients yields a fundamental diagram that follows qualitatively the behavior reported through empirical data (say flow reduction for the highest densities). We have also discussed different approaches proposed by other authors in order to overcome this problem. See \ref{appendix_1} for a more detailed discussion.\\
-
-\subsection{\label{clusters}Clusters}
-
-Cluster formation is a very important process in pedestrian dynamics. Moreover, is the key process that explains the clogging phenomena in bottleneck evacuations. We analyzed the clustering formation according to the granular cluster definition given in Section~\ref{granular-cluster}. Fig.~\ref{cluster_distribution} shows the histograms of the cluster size distribution for three different densities, from top to bottom: $\rho=4.5$, $\rho=5$ and $\rho=5.5$. These three
-densities are representative for the crossover between
-a non-clusterized regime and a unique “giant” cluster
-regime. We studied two situations for each density: the
-\textcolor{red}{original} SFM on left hand side plots, and the enhanced
-friction situation on the right hand side plots (see
-caption for details).\\
-
-We found two unexpected results. Increasing the density produces bigger size clusters until the size distribution suddenly switches to a bimodal distribution (compare \ref{size_distribution_w22_density5} with \ref{size_distribution_w22_density5_5} and \ref{size_distribution_w22_density4.5_kx10} with \ref{size_distribution_w22_density5_kx10}). Once
-this phenomenon occurs, any of two possibilities may
-appear: the pedestrian belongs to a small cluster (out
-of many caged in the crowd) or he (she) belongs to the
-giant cluster (with a size comparable to the entire crowd).\\
-
-We also observed that this phenomenon is controlled by the friction. For higher frictions, the crossover to the bimodal distribution occurs at lower densities (see Fig.~\ref{size_distribution_w22_density5} and Fig.~\ref{size_distribution_w22_density5_kx10}). Despite the fact that both correspond to the same density, Fig.~\ref{size_distribution_w22_density5_kx10} already attained the bimodal distribution since the friction force is ten times greater than in Fig.~\ref{size_distribution_w22_density5}. This peculiar phenomenon
-occurs because in an enhanced friction scenario the
-individuals find it harder to detach from each other. On
-the opposite, when the friction is weak, the individuals
-detach themselves more easily, leading to a situation
-where large clusters are less probable.\\
-
-\begin{figure}[!htbp]
-\centering
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density4_5.eps}\label{size_distribution_w22_density4.5}}\ 
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density4_5_kx10.eps}\label{size_distribution_w22_density4.5_kx10}}\\
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5.eps}\label{size_distribution_w22_density5}}\
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_kx10.eps}\label{size_distribution_w22_density5_kx10}}\\
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_5.eps}\label{size_distribution_w22_density5_5}}\
-    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_5_kx10.eps}\label{size_distribution_w22_density5_5_kx10}}
-\caption[width=0.47\columnwidth]{Cluster size distribution for six different scenarios. (a) SFM friction parameters and $\rho=4.5$, the bin size is 1 p (b) friction parameters increased by a factor of ten and $\rho=4.5$, the bin size is 1 p (c) SFM friction parameters and $\rho=5$, the bin size is 50 p (d) friction parameters increased by a factor of ten and $\rho=5$, the bin size is 50 p (e) SFM friction parameters and $\rho=5.5$, the bin size is 50 p (f) friction parameters increased by a factor of ten and $\rho=5.5$, the bin size is 50 p.}
-\label{cluster_distribution}
-\end{figure}
-
-To get a better view of this phenomenon, we represent in Fig.~\ref{fic} the fraction of clustered individual as a function of the density for four different situations in which we only changed the friction coefficients. The fraction of clustered individuals is defined as the amount of pedestrians that belong to a cluster (of two or more individuals) over the total number pedestrians in the corridor. 
-We can see that there is a transition from a non-clustered crowd to a full-clustered crowd. This transition occurs in a very narrow range of densities, causing the cluster formation process to occur between $4.4<\rho<5.3$. When the friction coefficient is enhanced, the transition takes place at a lower density threshold. This result is in complete agreement with the histograms shown in Fig.~\ref{cluster_distribution}, confirming the fact that friction promotes the formation of clusters.\\
-
-As expected, the transition sharpens when both $\kappa_i$ and $\kappa_w$ are increased (squared symbol in Fig.~\ref{fic}). However, the fraction of clustered individuals is always greater than in the original SFM when just one of the
-two coefficients is increased. Notice that there is not a big difference between the modification of $\kappa_i$ and the modification of $\kappa_w$. This suggests that it does not really matter if the clusterization starts at the areas close to the walls or in the middle of the crowd.\\
-
-
-\begin{figure}[htbp!]
-\centering
-\includegraphics[width=0.7\columnwidth]
-{./fracc_clusteriz_vs_density.eps}
-\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m~s$^{-1}$. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
-\end{figure}
-
-Two main conclusions can be outlined from the above
-results. The friction coefficients between the pedestrians
-(and with the walls) appear as decisive parameters
-with respect to the crossover between the freely moving
-regime and the slow down regime. The precise (density) threshold between both regimes will actually depend on
-the friction coefficients, since these control the efforts
-required by the pedestrians to detach from each other.
-Above this threshold (say, at high densities) the whole
-crowd slows down, since the pedestrians appear mostly
-clustered or ``caged" in a clustered environment.\\
-
-\section{\label{conclusions}Conclusions}
-
-Our investigation focused on the fundamental diagram in the context of the 
-social force model. We compared empirical data recorded at 
-the entrance of the Jamaraat bridge (see Ref.~\cite{helbing3}) with our own SFM 
-simulations. We observed  that the  social force model in its 
-original version does not fit into the empirical fundamental 
-diagram since the pedestrian flow increases even for high dense 
-crowds. The reasons for this mismatching were studied through 
-numerical computations and by a simple theoretical example. We arrived to the 
-conclusion that either increasing the friction coefficient or increasing the 
-relaxation time may be the key for achieving a non-increasing 
-flow in the congested regime of the fundamental diagram. The 
-latter has already been explored in Ref.~\cite{johansson} and a 
-similar idea was introduced in Ref.\cite{parisi2}. We noticed, 
-though, that both approaches are equivalent since both affect 
-the reduced-in-units equation of motion in a similar fashion.\\
-
-Our simple schematic model (see \ref{appendix_2}) suggests 
-that the mismatching problem could be addressed 
-alternatively by  modifying the friction coefficient. In light 
-of this, we performed numerical simulations increasing the 
-value of $\kappa$. We were able to mimic the empirical 
-fundamental diagram for sufficiently high values of $\kappa$, 
-while keeping the original SFM unchanged (without incorporating neither additional forces nor extra parameters). 
-This is actually the major achievement of our investigation. \\
-
-We further explored the velocity profile 
-across a corridor. It appeared to follow a parabolic-like 
-function. The pedestrians at the middle of the 
-corridor attain the maximum velocity, while those close to the 
-walls attain the minimum. We noticed that the 
-velocity profiles, after been scaled by the maximum velocity $v_{max}$ and the 
-corridor width $w$, yield a somewhat universal behavior, 
-regardless of the corridor width. Thus, we worked on the 
-hypothesis that the dynamics should be essentially the same for narrow or wide 
-passageways. \\
-
-The presence of clustering structures was found to be controlled 
-by the friction coefficient. Interestingly, increasing the 
-pedestrian-pedestrian friction ($\kappa_i$) or the pedestrian-wall friction 
-coefficient ($\kappa_w$) yields a similar clusterization dependence with 
-density.\\
-
-All these phenomena suggest that further research needs to be  
-done regarding the friction coefficient. The explored values 
-introduced through the investigation, however, should not be considered as 
-``empirical'' ones. Its true meaning (within the context of the SFM) is related 
-to the other parameters in the model (see \ref{appendix_1}). A real consensus 
-on empirical values of $\kappa$ is still missing, to our knowledge. Further analysis are needed to fully explore this issue and are currently under development. \\
-
-
-We further propose modeling the pedestrian-wall friction 
-interaction with a different coefficient than the pedestrian-pedestrian friction 
-interaction. This does neither mean a ``re-calibration'' (for 
-high dense crowds) nor a departure from the \textcolor{red}{original} SFM model. 
-We actually find no reason for changing other parameters, regardless of any 
-specific situation. We also want to stress the fact that studying the friction 
-coefficients may be a critical factor to properly reproduce the dynamics of a 
-massive evacuation under high levels of anxiety. 
-\\  
-
-\section*{Acknowledgments}
-This work was supported by the National Scientific and Technical 
-Research Council (spanish: Consejo Nacional de Investigaciones Cient\'\i ficas 
-y T\'ecnicas - CONICET, Argentina) grant Programaci\'on Cient\'\i fica 2018 (UBACYT) Number 20020170100628BA.
-
-\appendix
-
-\appendix
-
-\section{\label{appendix_1}The reduced equation of motion}
+\subsection{\label{appendix_1}The reduced equation of motion}
 
 The equation of motion within the context of the Social 
 Force Model includes at least six parameters ($m$, $\tau$, $A$, $B$, 
@@ -796,10 +624,10 @@ some kind of balance exists between neighboring pedestrians in
 symmetrical configurations (\textit{i.e.} in crowded corridors). We may 
 hypothesize that the ``key control parameter'' may correspond to either 
 $\tau$, or, the friction itself $\kappa$. This is an open question, and a 
-first order approach to this matter is outlined in \ref{appendix_2}.\\
+first order approach to this matter is outlined in Section~\ref{appendix_2}.\\
 
 
-\section{\label{appendix_2}A simple model for the corridor}
+\subsection{\label{appendix_2}A simple model for the corridor}
 
 A toy model for a moving crowd along a corridor is the one represented 
 schematically in Fig.~\ref{pasillo}. Pedestrians (circles in 
@@ -808,7 +636,7 @@ are assumed to be lined up from side to side across the corridor, at any given
 position. Social forces in the $x$-direction are further considered to vanish 
 because of translational symmetry. Thus, only the sliding friction is allowed 
 to balance the pedestrians own desire. The (reduced) movement equation for 
-the $x$-direction according to \ref{appendix_1} and Fig.~\ref{pasillo} 
+the $x$-direction according to Section \ref{appendix_1} and Fig.~\ref{pasillo} 
 is  
 
 \begin{figure}[htbp!]
@@ -935,6 +763,183 @@ diminishes as the corridor becomes more crowded. But, if $c$ surpasses this
 threshold, the flux slope becomes positive, although the mean velocity 
 diminishes. We conclude that the role of the pedestrians' friction coefficient is crucial 
 for building the fundamental diagram.   
+
+
+
+
+
+
+\subsection{Friction modification}
+
+As already mentioned, the results shown so far indicate that friction may be the 
+key magnitude for fitting the fundamental diagram into the experimental data. We 
+want to make clear that fitting the experimental data means mimicking 
+(qualitatively) the congested regime reported by different authors (including 
+the Jamaraat study in Ref.~\cite{helbing3}) for corridors as width as 22~m. The 
+\textcolor{red}{original} version of the Social Force Model proposes the same 
+friction coefficient for the pedestrian-pedestrian interaction and the 
+pedestrian-wall interaction. The proposed value was $\kappa = 2.4\times10^{5}$. 
+This value is widely used in many studies.  \\
+
+We tested the friction coefficient modification in Section \ref{appendix_2} and we found that the fundamental diagram experiences a qualitatively change when the friction coefficient $\kappa$ is varied. We further performed numerical simulations in the context of the SFM. We call $\kappa_i$ as the friction coefficient of the pedestrian-pedestrian interaction and $\kappa_w$ as the friction coefficient of the pedestrian-wall interaction. Fig.~\ref{fgmodified-w22} shows the flow vs density for different values of $\kappa_i$ and $\kappa_w$.\\
+
+The triangular symbols in Fig.~\ref{fgmodified-w22} correspond to the increase in one order of magnitude of the wall friction (now $\kappa_w = 2.4\times10^{6}$), leaving the pedestrian-pedestrian friction unchanged (\textit{i.e.}, $\kappa_i = 2.4\times10^{5}$). We can see that the flow reduces a little bit, but this is not enough to change significantly the congested regime. \\
+
+The circles in Fig.~\ref{fgmodified-w22} correspond to a modification of the friction between pedestrians without changing the value of the wall friction. We increased the pedestrian-pedestrian friction by a factor of ten ($\kappa_i = 2.4\times10^{6}$). Here we see a significant reduction of the flow. The qualitative behavior resembles the fundamental diagram reported by Helbing \textit{et al}. with a well defined congested regime for the greatest densities.\\
+
+We also tested the case were both friction coefficients surpass ten times the value of the original model (now $\kappa_w = \kappa_i = 2.4\times10^{6}$). The squared symbols represent this scenario. As expected, the flow reduces significantly respect the original case (cross symbol). Interestingly, the reduction of the flow is more than the reduction due to the increment of $\kappa_i$ plus the reduction of the flow due to $\kappa_w$. This behavior is indicative that the superposition principle does not hold in this system because of the non-linearity of the equation of motion.     \\
+
+This finding allows us to affirm that the friction plays a crucial role in the functional behavior of the fundamental diagram. The increment of both individual-individual friction and wall friction are determinant in order to achieve a congested regime. More specifically, the empirical behavior for the fundamental diagram can be achieved by properly increasing the friction coefficients. In \ref{appendix_3} we show that the friction modification does not alter already studied behaviors of pedestrian dynamics.\\
+
+Recall that other authors address the ``congested regime problem" by modifying different aspects of the model. Ref.~\cite{parisi2} imposes zero desired velocity once pedestrians are close enough, Ref.~\cite{johansson} increases the relaxation time in order to slow down the net-time headway, and more recently,  Ref.~\cite{kwak} induce the jamming transition by an attraction. Many of these approaches seem to be equivalent. In Section \ref{appendix_1} we discuss about how the modification of the relaxation time and the increment of the friction coefficient yield a similar effect, since both affect the same term in the reduced-in-units equation of motion.  The relaxation time, however, also affects the social interactions (see Sections \ref{Hypotheses} and \ref{appendix_1}).   \\
+
+We claim that in real scenarios, a combination of all these factors may be the cause of the marked flow reduction that portray the fundamental diagram. The pedestrians path can be very complex even if it is a simple enclosure (straight corridor) and the target is well defined (unidirectional flow). Beyond the complexities given by the internal motivations of pedestrians, we strongly suggest studying and modeling coefficients of friction between individuals and the friction with the walls. These two parameters have shown to be very important in the pedestrian dynamics and deserve a closer inspection in future research.\\
+
+We want to emphasize that the proposals stated in Refs.~\cite{parisi2,johansson,kwak}  only apply under normal conditions. If a crowd is under high levels of anxiety, pedestrians will neither keep distance between each other, nor will feel the urge to see an ``attraction". Thus, studying the friction coefficients may be a critical factor to properly reproduce the dynamics of a massive evacuation under stress.\\
+
+With all these insights, we can say that the narrow corridors have no drawback in the fitting of the flow vs. density relation because very high velocities are not attainable. This happens because in narrow corridors, the friction of the walls has a lot of ``relative weight" in the overall friction of the system. 
+The friction exerted by the walls is fundamental in order to produce the parabolic shape of the velocity profile. The walls provide friction force in the opposite direction to the speed of the individual (drag backwards), since they act like a fixed pedestrian. In other ways, friction between pedestrians can produce either drag forward or drag backwards depending on the contacting pedestrians velocities (see Eq.~\ref{granular}).\\
+
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.7\columnwidth]
+{./flow-density_pasillo22m_fgmodified_multi.eps}
+\caption{\label{fgmodified-w22} Fundamental diagram (flow vs density) for different friction coefficient (see legend for the corresponding values). The simulated corridor was 28~m length. Pedestrians walk from left to right with periodic boundary condition in the $x$-direction. Initially, pedestrians were randomly distributed. For each density, we measure the flow once the system reaches the stationary state.}
+\end{figure}
+
+In this subsection we have shown that an adequate modification of the friction coefficients yields a fundamental diagram that follows qualitatively the behavior reported through empirical data (say flow reduction for the highest densities). We have also discussed different approaches proposed by other authors in order to overcome this problem. See Section \ref{appendix_1} for a more detailed discussion.\\
+
+\subsection{\label{clusters}Clusters}
+
+Cluster formation is a very important process in pedestrian dynamics. Moreover, is the key process that explains the clogging phenomena in bottleneck evacuations. We analyzed the clustering formation according to the granular cluster definition given in Section~\ref{granular-cluster}. Fig.~\ref{cluster_distribution} shows the histograms of the cluster size distribution for three different densities, from top to bottom: $\rho=4.5$, $\rho=5$ and $\rho=5.5$. These three
+densities are representative for the crossover between
+a non-clusterized regime and a unique “giant” cluster
+regime. We studied two situations for each density: the
+\textcolor{red}{original} SFM on left hand side plots, and the enhanced
+friction situation on the right hand side plots (see
+caption for details).\\
+
+We found two unexpected results. Increasing the density produces bigger size clusters until the size distribution suddenly switches to a bimodal distribution (compare \ref{size_distribution_w22_density5} with \ref{size_distribution_w22_density5_5} and \ref{size_distribution_w22_density4.5_kx10} with \ref{size_distribution_w22_density5_kx10}). Once
+this phenomenon occurs, any of two possibilities may
+appear: the pedestrian belongs to a small cluster (out
+of many caged in the crowd) or he (she) belongs to the
+giant cluster (with a size comparable to the entire crowd).\\
+
+We also observed that this phenomenon is controlled by the friction. For higher frictions, the crossover to the bimodal distribution occurs at lower densities (see Fig.~\ref{size_distribution_w22_density5} and Fig.~\ref{size_distribution_w22_density5_kx10}). Despite the fact that both correspond to the same density, Fig.~\ref{size_distribution_w22_density5_kx10} already attained the bimodal distribution since the friction force is ten times greater than in Fig.~\ref{size_distribution_w22_density5}. This peculiar phenomenon
+occurs because in an enhanced friction scenario the
+individuals find it harder to detach from each other. On
+the opposite, when the friction is weak, the individuals
+detach themselves more easily, leading to a situation
+where large clusters are less probable.\\
+
+\begin{figure}[!htbp]
+\centering
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density4_5.eps}\label{size_distribution_w22_density4.5}}\ 
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density4_5_kx10.eps}\label{size_distribution_w22_density4.5_kx10}}\\
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5.eps}\label{size_distribution_w22_density5}}\
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_kx10.eps}\label{size_distribution_w22_density5_kx10}}\\
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_5.eps}\label{size_distribution_w22_density5_5}}\
+    \subfloat[]{\includegraphics[width=0.40\columnwidth]{./size_distribution_w22_density5_5_kx10.eps}\label{size_distribution_w22_density5_5_kx10}}
+\caption[width=0.47\columnwidth]{Cluster size distribution for six different scenarios. (a) SFM friction parameters and $\rho=4.5$, the bin size is 1 p (b) friction parameters increased by a factor of ten and $\rho=4.5$, the bin size is 1 p (c) SFM friction parameters and $\rho=5$, the bin size is 50 p (d) friction parameters increased by a factor of ten and $\rho=5$, the bin size is 50 p (e) SFM friction parameters and $\rho=5.5$, the bin size is 50 p (f) friction parameters increased by a factor of ten and $\rho=5.5$, the bin size is 50 p.}
+\label{cluster_distribution}
+\end{figure}
+
+To get a better view of this phenomenon, we represent in Fig.~\ref{fic} the fraction of clustered individual as a function of the density for four different situations in which we only changed the friction coefficients. The fraction of clustered individuals is defined as the amount of pedestrians that belong to a cluster (of two or more individuals) over the total number pedestrians in the corridor. 
+We can see that there is a transition from a non-clustered crowd to a full-clustered crowd. This transition occurs in a very narrow range of densities, causing the cluster formation process to occur between $4.4<\rho<5.3$. When the friction coefficient is enhanced, the transition takes place at a lower density threshold. This result is in complete agreement with the histograms shown in Fig.~\ref{cluster_distribution}, confirming the fact that friction promotes the formation of clusters.\\
+
+As expected, the transition sharpens when both $\kappa_i$ and $\kappa_w$ are increased (squared symbol in Fig.~\ref{fic}). However, the fraction of clustered individuals is always greater than in the original SFM when just one of the
+two coefficients is increased. Notice that there is not a big difference between the modification of $\kappa_i$ and the modification of $\kappa_w$. This suggests that it does not really matter if the clusterization starts at the areas close to the walls or in the middle of the crowd.\\
+
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.7\columnwidth]
+{./fracc_clusteriz_vs_density.eps}
+\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m~s$^{-1}$. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
+\end{figure}
+
+Two main conclusions can be outlined from the above
+results. The friction coefficients between the pedestrians
+(and with the walls) appear as decisive parameters
+with respect to the crossover between the freely moving
+regime and the slow down regime. The precise (density) threshold between both regimes will actually depend on
+the friction coefficients, since these control the efforts
+required by the pedestrians to detach from each other.
+Above this threshold (say, at high densities) the whole
+crowd slows down, since the pedestrians appear mostly
+clustered or ``caged" in a clustered environment.\\
+
+\section{\label{conclusions}Conclusions}
+
+Our investigation focused on the fundamental diagram in the context of the 
+social force model. We compared empirical data recorded at 
+the entrance of the Jamaraat bridge (see Ref.~\cite{helbing3}) with our own SFM 
+simulations. We observed  that the  social force model in its 
+original version does not fit into the empirical fundamental 
+diagram since the pedestrian flow increases even for high dense 
+crowds. The reasons for this mismatching were studied through 
+numerical computations and by a simple theoretical example. We arrived to the 
+conclusion that either increasing the friction coefficient or increasing the 
+relaxation time may be the key for achieving a non-increasing 
+flow in the congested regime of the fundamental diagram. The 
+latter has already been explored in Ref.~\cite{johansson} and a 
+similar idea was introduced in Ref.\cite{parisi2}. We noticed, 
+though, that both approaches are equivalent since both affect 
+the reduced-in-units equation of motion in a similar fashion.\\
+
+Our simple schematic model (Section \ref{appendix_2}) suggests 
+that the mismatching problem could be addressed 
+alternatively by  modifying the friction coefficient. In light 
+of this, we performed numerical simulations increasing the 
+value of $\kappa$. We were able to mimic the empirical 
+fundamental diagram for sufficiently high values of $\kappa$, 
+while keeping the original SFM unchanged (without incorporating neither additional forces nor extra parameters). 
+This is actually the major achievement of our investigation. \\
+
+We further explored the velocity profile 
+across a corridor. It appeared to follow a parabolic-like 
+function. The pedestrians at the middle of the 
+corridor attain the maximum velocity, while those close to the 
+walls attain the minimum. We noticed that the 
+velocity profiles, after been scaled by the maximum velocity $v_{max}$ and the 
+corridor width $w$, yield a somewhat universal behavior, 
+regardless of the corridor width. Thus, we worked on the 
+hypothesis that the dynamics should be essentially the same for narrow or wide 
+passageways. \\
+
+The presence of clustering structures was found to be controlled 
+by the friction coefficient. Interestingly, increasing the 
+pedestrian-pedestrian friction ($\kappa_i$) or the pedestrian-wall friction 
+coefficient ($\kappa_w$) yields a similar clusterization dependence with 
+density.\\
+
+All these phenomena suggest that further research needs to be  
+done regarding the friction coefficient. The explored values 
+introduced through the investigation, however, should not be considered as 
+``empirical'' ones. Its true meaning (within the context of the SFM) is related 
+to the other parameters in the model (see Section \ref{appendix_1}). A real consensus 
+on empirical values of $\kappa$ is still missing, to our knowledge. Further analysis are needed to fully explore this issue and are currently under development. \\
+
+
+We further propose modeling the pedestrian-wall friction 
+interaction with a different coefficient than the pedestrian-pedestrian friction 
+interaction. This does neither mean a ``re-calibration'' (for 
+high dense crowds) nor a departure from the \textcolor{red}{original} SFM model. 
+We actually find no reason for changing other parameters, regardless of any 
+specific situation. We also want to stress the fact that studying the friction 
+coefficients may be a critical factor to properly reproduce the dynamics of a 
+massive evacuation under high levels of anxiety. 
+\\  
+
+\section*{Acknowledgments}
+This work was supported by the National Scientific and Technical 
+Research Council (spanish: Consejo Nacional de Investigaciones Cient\'\i ficas 
+y T\'ecnicas - CONICET, Argentina) grant Programaci\'on Cient\'\i fica 2018 (UBACYT) Number 20020170100628BA.
+
+\appendix
+
+\appendix
 
 
 \section{\label{appendix_3} Testing out previous results}
