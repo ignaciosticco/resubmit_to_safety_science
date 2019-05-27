@@ -59,14 +59,14 @@ Jamaraat Pilgrimage
 \section{\label{introduction}Introduction}
 
 \textcolor{red}{In the last decades, many microscopic models 
-for crowd dynamics have been developed. One of the first models was developed by Hirai 
+for crowd dynamics have been developed. The first model was developed by Hirai 
 and Tarui (1975) introducing the class of \textit{force based} models 
 \cite{Hirai}. These models represent the interaction between 
 pedestrians and their environment using different kinds of forces inspired in physical systems. For 
 example, Okazaki (1979) modeled the movement the pedestrians as the motion 
 of a magnetized object within a magnetic field \cite{Okazaki}.}\\
 
-\textcolor{red}{By the late '90s and the beginning of the century, Helbing 
+By the late '90s and the beginning of the century, Helbing 
 \textit{et al.} proposed a model that included socio-psychological and physical 
 forces to simulate crowd dynamics. According to Helbing \textit{et al.}, both 
 the environment and the individuals' own desire affect the pedestrians motion in 
@@ -76,7 +76,7 @@ socio-psychological phenomenon of crowds behavior to the ``microscopic''
 formalism of moving particles. The model succeeded at this instance to 
 reproduce the slow down in the efficiency in the evacuation process as 
 pedestrians try harder to escape from a dangerous situation (\textit{i.e.} 
-``faster is slower'' effect) \cite{Helbing1,Dorso1,Dorso2}.} \\ 
+``faster is slower'' effect) \cite{Helbing1,Dorso1,Dorso2}. \\ 
 
 The SFM, in its basic version, was reported to be suitable for describing, 
 at least qualitatively, a variety of emergency situations, including the presence
@@ -282,9 +282,9 @@ while flow is determined according to the fluid-dynamic formula
 \end{equation}
 
 It is well known that the \textcolor{red}{original} version of the Social Force 
-Model \textcolor{red}{\cite{parisi2}} is incapable of reproducing the 
+Model  is incapable of reproducing the 
 fundamental diagram at high densities (say above 
-\textcolor{red}{5~p~m$^{-2}$)}. Different 
+\textcolor{red}{5~p~m$^{-2}$)} \textcolor{red}{\cite{parisi2}} . Different 
 approaches were proposed to fix this drawback: increasing the net-time 
 headway~\cite{johansson}, canceling the desired velocity~\cite{parisi2} or even 
 inducing the jamming state by an attraction target~\cite{kwak}. These approaches 
@@ -364,30 +364,30 @@ has units $\left [ \kappa \right]=$Kg~m$^{-1}$~s$^{-1}$, the density $\left [
 \rho \right]=$p~m$^{-2}$ and the flow $\left [ J \right 
 ]=$p~m$^{-1}$~s$^{-1}$.\\
 
-\subsection*{\label{software}Simulation software}
+\subsection{\label{software}\textcolor{red}{Simulation software}}
 
-\textcolor{red}{The simulations were implemented on LAMMPS molecular dynamics 
+The simulations were implemented on LAMMPS molecular dynamics 
 simulator with parallel computing capabilities \cite{plimpton}. The time 
 integration algorithm followed the velocity Verlet scheme with a time step of 
 $10^{-4}$~s. All the necessary parameters were set to the same values as in 
-previous works (see Refs. \cite{Dorso5,sticco}), except for the friction 
-coefficient $\kappa$.} \\
+previous works (see Refs.~\cite{Dorso5,sticco}), except for the friction 
+coefficient $\kappa$. \\
 
-\textcolor{red}{We implemented special modules in C++ for upgrading the LAMMPS 
+We implemented special modules in C++ for upgrading the LAMMPS 
 capabilities to attain the Social Force Model simulations. We also checked over 
 the LAMMPS output with previous computations (see Refs. \cite{Dorso1, 
-Dorso2,Dorso3, Dorso4,Dorso6}).}\\
+Dorso2,Dorso3, Dorso4,Dorso6}).\\
 
-\textcolor{red}{The measurements were taken once the system reached the 
+The measurements were taken once the system reached the 
 stationary state ($t=30$~s), while the configurations of the systems were 
 recorded every 0.05~s, that is, at intervals as short as 10\% of the 
 pedestrian’s relaxation time (see Section. \ref{sfm}). The recorded magnitudes 
 were the pedestrian’s positions and velocities for each process. We also 
-computed the clustering structures using a LAMMPS built in function 
+computed the clustering structures using a LAMMPS built-in function 
 named compute cluster-atom. This function assigns each pedestrian a cluster ID.
 A cluster is defined as a set of pedestrians, each of which is within the cutoff
 distance from one or more other pedestrians in the cluster. 
-If a pedestrian has no neighbors within the cutoff distance, then it is a 1-pedestrian cluster.}\\
+If a pedestrian has no neighbors within the cutoff distance, then it is a 1-pedestrian cluster.\\
 
 
 
@@ -430,7 +430,7 @@ modeled under quasi-stationary conditions in the high density regime. Our
 starting point is the re-examination of the (basic) SFM.
 \textcolor{red}{We proposed to reduce in units the equation of motion of 
 the SFM (Eq.~\ref{eqn_appendix_1} and Eq.~\ref{eqn_appendix_2}). This leads us
-to two control parameters} $\mathcal{A}$ and $\mathcal{K}$ (see Section~\ref{appendix_1}) may handle
+to two control parameters} $\mathcal{A}$ and $\mathcal{K}$ (see Section~\ref{appendix_1}) that may handle
 the collective motion in dense crowds. We presume that physical contact is
 a key feature in dense crowds, despite the fact that other issues may
 also contribute to the flow reduction \cite{johansson1}. However, the latter could
@@ -842,7 +842,11 @@ We found two unexpected results. Increasing the density produces bigger size clu
 this phenomenon occurs, any of two possibilities may
 appear: the pedestrian belongs to a small cluster (out
 of many caged in the crowd) or he (she) belongs to the
-giant cluster (with a size comparable to the entire crowd).\\
+giant cluster (with a size comparable to the entire crowd).
+\textcolor{red}{In other words, the bimodal distribution occurs because when 
+the giant component is formed there are some small clusters ``caged"
+inside the giant component. These small clusters do not touch any 
+pedestrian of the giant component.} \\
 
 We also observed that this phenomenon is controlled by the friction. For higher frictions, the crossover to the bimodal distribution occurs at lower densities (see Fig.~\ref{size_distribution_w22_density5} and Fig.~\ref{size_distribution_w22_density5_kx10}). Despite the fact that both correspond to the same density, Fig.~\ref{size_distribution_w22_density5_kx10} already attained the bimodal distribution since the friction force is ten times greater than in Fig.~\ref{size_distribution_w22_density5}. This peculiar phenomenon
 occurs because in an enhanced friction scenario the
@@ -1034,7 +1038,7 @@ a crowd in panic, Proceedings of the 1975 International
 Conference on Cybernetics Society, pp. 409-411}
 
 \bibitem{Boltes}
-\textcolor{red}{Boltes M., Zhang J., Tordeux A., Schadschneider A., Seyfried A., 
+\textcolor{red}{Boltes, M., Zhang, J., Tordeux, A., Schadschneider A., Seyfried A., 
 2018. Empirical Results of Pedestrian and Evacuation Dynamics. In: Meyers R. 
 (eds) Encyclopedia of Complexity and Systems Science. Springer, Berlin, 
 Heidelberg}
@@ -1050,17 +1054,17 @@ A Microscopic Model. Open Journal of Modelling and Simulation,
 3, 81-95. doi: 10.4236/ojmsi.2015.33009.}
 
 \bibitem{Baqui1}
-\textcolor{red}{Baqui, Muhammad, and Rainald Löhner. "Real-time crowd safety
+\textcolor{red}{Baqui, M., and L\"ohner, R. "Real-time crowd safety
 and comfort management from CCTV images." Real-Time Image and Video Processing 2017.
 Vol. 10223. International Society for Optics and Photonics, 2017.}
 
 \bibitem{Togashi1}
-\textcolor{red}{Togashi, Fumiya, et al. "Using ensemble Kalman filter to
-determine parameters for computational crowd dynamics simulations." 
-Engineering Computations 35.7 (2018): 2612-2628.}
+\textcolor{red}{Togashi, F., Misaka, T., L\"ohner, R., \& Obayashi, S. (2018). 
+Using ensemble Kalman filter to determine parameters for computational crowd dynamics simulations. 
+Engineering Computations, 35(7), 2612-2628.}
 
 \bibitem{lohner2}
-\textcolor{red}{L\"ohner, Rainald. "On the modeling of pedestrian motion." 
+\textcolor{red}{L\"ohner, R. "On the modeling of pedestrian motion." 
 Applied Mathematical Modelling 34.2 (2010): 366-382.}
 
 \bibitem{johansson1}
@@ -1136,7 +1140,7 @@ dynamics." Journal of computational physics 117 (1), 1-19.
 {\path{https://doi.org/10.1006/jcph.1995.1039}}
 
 \bibitem{kwak}
-Kwak, Jaeyoung, Jo, Hang-Hyun, Luttinen, T., and Kosonen, L., 2017. "Jamming 
+Kwak, J, Hang-Hyun, J., Luttinen, T., and Kosonen, L., 2017. "Jamming 
 transitions induced by an attraction in pedestrian flow." Physical Review E 96 
 (2), 022319.
 {\path{https://doi.org/10.1103/PhysRevE.96.022319}}
@@ -1214,13 +1218,13 @@ formation process in bidirectional pedestrian flow." Physical Review E 94
 {\path{https://doi.org/10.1103/PhysRevE.94.032304}}
 
 \bibitem{guo1}
-Guo, Wei, Xiaolu Wang, and Xiaoping Zheng., 2015. "Lane formation in pedestrian 
+Wei, G., Wang X., and Zheng, X., 2015. "Lane formation in pedestrian 
 counterflows driven by a potential field considering following and avoidance 
 behaviours." Physica A: Statistical Mechanics and its Applications 432, 87-101.
 {\path{https://doi.org/10.1016/j.physa.2015.03.020}}
 
 \bibitem{qiao1}
-Qiao, Jing and Sun, Lishan and Qiu, Shi and Rong, Jian and Liu, Xiaoming, 2017. 
+Jing, Q., Lishan, S., Shi, Q., Jian, R.  and Xiaoming L., 2017. 
 "Reducing Bidirectional Pedestrian Conflict Based on Lane Formation Phenomenon 
 in Subway Corridors." Promet-Traffic\&Transportation 29 (5), 489-502.
 {\path{https://doi.org/10.7307/ptt.v29i5.2168}}
@@ -1239,7 +1243,7 @@ Mathematics 36 (2), 1113-1141.
 {\path{https://doi.org/10.1007/s40314-016-0316-x}}
 
 \bibitem{lin}
-Lin, Peng, Jian Ma, and Siuming Lo., 2016. "Discrete element crowd model for 
+Peng, L., Ma, J. and Lo, S. 2016. "Discrete element crowd model for 
 pedestrian evacuation through an exit." Chinese Physics B 25 (3), 034501.
 {\path{https://doi.org/10.1088/1674-1056/25/3/034501}}
 
@@ -1272,7 +1276,7 @@ emergency planning guidance:‘Mass panic’ or collective resilience?." Resilie
 {\path{https://doi.org/10.1080/21693293.2013.765740}}
 
 \bibitem{li1}
-Meifang Li, Yongxiang Zhao, Lerong He, Wenxiao Chen and Xianfeng Xu, 
+Li, M., Zhao, Y/., He, L., Chen, W. and Xu, X. 
 2015. "The parameter calibration and optimization of social force model for the 
 real-life 2013 Ya’an earthquake evacuation in China." Safety science 79, 
 243-253.
