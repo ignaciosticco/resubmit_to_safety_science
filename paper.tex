@@ -59,12 +59,12 @@ Jamaraat Pilgrimage
 \section{\label{introduction}Introduction}
 
 \textcolor{red}{In the last decades, many microscopic models 
-for crowd dynamics have been developed. The first model was developed by Hirai 
+for crowd dynamics were developed. The class of force-based model was introduced by Hirai 
 and Tarui (1975) introducing the class of \textit{force based} models 
 \cite{Hirai}. These models represent the interaction between 
 pedestrians and their environment using different kinds of forces inspired in physical systems. For 
-example, Okazaki (1979) modeled the movement the pedestrians as the motion 
-of a magnetized object within a magnetic field \cite{Okazaki}.}\\
+example, Okazaki (1979) modeled the movement of pedestrians as 
+a magnetized object immersed a magnetic in field \cite{Okazaki}.}\\
 
 By the late '90s and the beginning of the century, Helbing 
 \textit{et al.} proposed a model that included socio-psychological and physical 
@@ -112,19 +112,17 @@ diagram (flux $J$ versus density $\rho$) that highly dense crowds (seemingly up
 to $10\,$p~m$^{-2}$) do not drive the pedestrians velocity to zero, although the 
 reasons for this remain rather obscure.   \\
 
-\textcolor{red}{More recent measures of the fundamental diagram in an extreme density
- situation show that, in some situations, the flux may increase with the density (Ref.~\cite{lohner1}). 
-This seems to contradict the results of Ref.~\cite{helbing3}. Nevertheless, the measurements of Ref.~\cite{lohner1}
-were taken in the Kabba while the measurements of Ref.~\cite{helbing3} were taken at the entrance of
-the Jamaraat bridge. As stated in Ref~\cite{lohner1}, the fundamental diagram may depend
-strongly on the type of motion and on the nature of the event. Pedestrians in the Kaaba
-may walk differently than pedestrians entering to the Jamarat bridge 
-(due to differences according to the moment of the ritual).}\\
+\textcolor{red}{More recent measures of the fundamental diagram in an extremely dense
+ situation show that, sometimes, the flux may increase with the density (Ref.~\cite{lohner1}). 
+This seems to contradict the results of Ref.~\cite{helbing3}. But both results seem 
+not to be completely  comparable since data was acquired at different points, and thus,
+at different stages of the ritual. Ref.~\cite{lohner1}, indeed, stated that the fundamental 
+diagram may strongly depend on the type of motion and the nature of the event.}\\
 
 \textcolor{red}{A lot of research has been done using data from the Mecca pilgrimage.
 Although in this work we focused on Ref.~\cite{helbing3}. There were several investigations 
 using real data to calibrate parameters of the PedFlow model developed by 
-Lohner et al. Ref.~\cite{lohner2}. Recently a paper was published that uses 
+L\"ohner et al. Ref.~\cite{lohner2}. Recently a paper was published that uses 
 the Kalman filter ensemble to adjust the parameters of this model Ref.~\cite{Togashi1}. 
 For more information on PedFlow and Mecca pilgrimage measurements
 see Refs.~\cite{Boltes,Dridi1,Dridi2,Baqui1,lohner1} }\\
@@ -426,12 +424,21 @@ dense crowds may suppose a somewhat commonality with granular
 media exists \cite{helbing3}.\\
 
 We show that the experimental data (say, the flux-density diagram) can be 
-modeled under quasi-stationary conditions in the high density regime. Our 
-starting point is the re-examination of the (basic) SFM.
-\textcolor{red}{We proposed to reduce in units the equation of motion of 
-the SFM (Eq.~\ref{eqn_appendix_1} and Eq.~\ref{eqn_appendix_2}). This leads us
-to two control parameters} $\mathcal{A}$ and $\mathcal{K}$ (see Section~\ref{appendix_1}) that may handle
-the collective motion in dense crowds. We presume that physical contact is
+modeled under quasi-stationary conditions in the high density regime.\\
+
+\textcolor{red}{Our starting point is the re-examination of the (basic) SFM. 
+We propose a reduce-in-units equation of motion of the SFM. The social 
+force $\mathbf{f}_s$ depends on an intensity $\mathcal{A}$ while the granular force $\mathbf{f}_g$ depends
+on $\mathcal{K}$. In Section~\ref{appendix_1} we derivate this reduce-in-units equation of motion
+and its corresponding control parameters. }\\
+
+%Our starting point is the re-examination of the (basic) SFM.
+%\textcolor{red}{We propose a reduce-in-units equation of motion of 
+%the SFM (Eq.~\ref{eqn_appendix_1} and Eq.~\ref{eqn_appendix_2}). This leads us
+%to two control parameters} $\mathcal{A}$ and $\mathcal{K}$ (see Section~\ref{appendix_1}) that may handle
+%the collective motion in dense crowds.
+
+ We presume that physical contact is
 a key feature in dense crowds, despite the fact that other issues may
 also contribute to the flow reduction \cite{johansson1}. However, the latter could
 be satisfactorily omitted in past research \cite{johansson}, and thus, we will not
@@ -532,7 +539,7 @@ profile in order to investigate this discrepancy.
 
 As we mentioned in Section \ref{fundamental_diagram}, when the density is low, pedestrians achieve the desired velocity ($v=v_d=1$~m~s$^{-1}$). Since the results of the previous Section only hold for the area located in the middle of the corridor (see \textcolor{red}{dashed circle in} Fig.~\ref{corridor}), we want to shed some light and understand what is happening across the entire corridor.\\
 
-We first noticed that low-density situations ($\rho<5$) lead to a cruising velocity profile $v=v_d$. This is valid for every location in the corridor (not only the center as was previously noticed in Section \ref{fundamental_diagram}). For higher densities($\rho>5$), the velocity profile turns into a parabola-like function. This shape resembles the usual velocity profile for laminar flow in a viscous fluid, where the velocity increases toward the center of a tube. In our case, pedestrians near the walls are the ones with the lower velocity. The velocity increases when departing from the wall until it reaches the maximum at the center of the corridor. This behavior suggests that the wall friction on the pedestrians, is playing a relevant role on the velocity distribution. \textcolor{red}{The velocity profile is in accordance with the empirical measurements of Ref.~\cite{zhang1}.}  \\
+We first noticed that low-density situations ($\rho<5$) lead to a cruising velocity profile $v=v_d$. This is valid for every location in the corridor (not only the center as was previously noticed in Section \ref{fundamental_diagram}). For higher densities($\rho>5$), the velocity profile turns into a parabola-like function. This shape resembles the usual velocity profile for laminar flow in a viscous fluid, where the velocity increases toward the center of a tube. In our case, pedestrians near the walls are the ones with the lower velocity. The velocity increases when departing from the wall until it reaches the maximum at the center of the corridor. This behavior suggests that the wall friction on the pedestrians, is playing a relevant role on the velocity distribution. \textcolor{red}{The velocity profile is in agreement with the empirical data in Ref.~\cite{zhang1}.}  \\
 
 Fig.~\ref{speed-profile-width-normaliz} exhibits the scaled velocity profile. The horizontal axis is normalized by the corresponding corridor width. The vertical axis is normalized by the maximum velocity ($v_{max}$) corresponding to each data set. Filled markers correspond density $\rho=9$, while empty markers correspond to $\rho=6$. Notice that all the data follow the same  pattern, suggesting that the velocity profile exhibits a somewhat fundamental behavior, regardless the scale of the corridor (and the density). Hence, the velocity growth rate from the wall towards the center of the corridor, is the same in spite of the size of the corridor width and the density. \\
 
@@ -624,7 +631,7 @@ control parameters in Eq.~(\ref{eqn_appendix_1}) for identical
 pedestrians. The ratio $\tau/m$ is common to both, but the magnitudes 
 $Av_d^{-1}$ and $\kappa B$ handle each parameter separately.\\
 
-\textcolor{red}{We interpret $\mathcal{A}$ as a parameter related exclusively to the 
+\textcolor{red}{We envisage $\mathcal{A}$ as a parameter related exclusively to the 
 repulsion between pedestrians and $\mathcal{K}$  as parameter related to the friction-repulsion.
 While the former is valid in every situation, the latter only takes part when the
 pedestrians are in contact.}\\
@@ -841,12 +848,12 @@ caption for details).\\
 We found two unexpected results. Increasing the density produces bigger size clusters until the size distribution suddenly switches to a bimodal distribution (compare \ref{size_distribution_w22_density5} with \ref{size_distribution_w22_density5_5} and \ref{size_distribution_w22_density4.5_kx10} with \ref{size_distribution_w22_density5_kx10}). Once
 this phenomenon occurs, any of two possibilities may
 appear: the pedestrian belongs to a small cluster (out
-of many caged in the crowd) or he (she) belongs to the
+of many ``caged" in the crowd) or he (she) belongs to the
 giant cluster (with a size comparable to the entire crowd).
-\textcolor{red}{In other words, the bimodal distribution occurs because when 
-the giant component is formed there are some small clusters ``caged"
-inside the giant component. These small clusters do not touch any 
-pedestrian of the giant component.} \\
+\textcolor{red}{In other words, the bimodal distribution occurs because,
+after the giant component is formed, many small clusters remain ``caged" 
+inside the giant component. These small clusters (or single individuals)
+do not touch permanently any pedestrian belonging to the giant component.} \\
 
 We also observed that this phenomenon is controlled by the friction. For higher frictions, the crossover to the bimodal distribution occurs at lower densities (see Fig.~\ref{size_distribution_w22_density5} and Fig.~\ref{size_distribution_w22_density5_kx10}). Despite the fact that both correspond to the same density, Fig.~\ref{size_distribution_w22_density5_kx10} already attained the bimodal distribution since the friction force is ten times greater than in Fig.~\ref{size_distribution_w22_density5}. This peculiar phenomenon
 occurs because in an enhanced friction scenario the
