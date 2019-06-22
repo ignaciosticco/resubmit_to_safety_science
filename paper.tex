@@ -16,6 +16,7 @@
 
 %\usepackage{epstopdf}
 
+
 \usepackage[caption=false]{subfig}
 
 \begin{document}
@@ -59,7 +60,7 @@ Jamaraat Pilgrimage
 \section{\label{introduction}Introduction}
 
 \textcolor{red}{In the last decades, many microscopic models 
-for crowd dynamics were developed. The class of force-based model was introduced by Hirai 
+for crowd dynamics were developed. The class of force-based model was proposed by Hirai 
 and Tarui (1975) introducing the class of \textit{force based} models 
 \cite{Hirai}. These models assimilate the interaction between 
 pedestrians and their environment using different kinds of forces inspired on physical systems. For 
@@ -76,7 +77,9 @@ socio-psychological phenomenon of crowds behavior to the ``microscopic''
 formalism of moving particles. The model succeeded at this instance to 
 reproduce the slow down in the efficiency in the evacuation process as 
 pedestrians try harder to escape from a dangerous situation (\textit{i.e.} 
-``faster is slower'' effect) \cite{Helbing1,Dorso1,Dorso2}. \\ 
+``faster is slower'' effect) \cite{Helbing1,Dorso2}.
+\textcolor{red}{The faster-is-slower effect was well explained by the presence of human blocking clusters 
+that obstruct the exit during an emergency evacuation \cite{Dorso1}.}  \\ 
 
 The SFM, in its basic version, was reported to be suitable for describing, 
 at least qualitatively, a variety of emergency situations, including the presence
@@ -88,7 +91,7 @@ In the last years several extensions of the Social Force Model have been
 proposed. These extensions solve numerical pitfalls \cite{koster1} 
 and other issues such as oscillations, overlapping and non-realistic trajectories
 \cite{chraibi1,dietrich1}. However, many of these extensions surpass the 
-crowded context of the original SFM \cite{Helbing1,Helbing4},focusing on the 
+crowded context of the original SFM \cite{Helbing1,Helbing4}, focusing on the 
 individual behavior of each agent. The basic SFM assumes strong interactions
 in a dense environment.\\
 
@@ -101,7 +104,7 @@ suggested by Helbing in Ref.~\cite{Helbing1} does not completely solve this
 issue. It neither agrees with the fact that pedestrians prefer to keep a 
 comfortable $0.5\,$m distance between each other in a moderately crowded 
 environment, nor it fits accurately the empirical velocities reported for 
-crowds under normal conditions. \cite{Lakoba}.  \\
+crowds under normal conditions \cite{Lakoba}.  \\
 
 Researchers turned back to examine the available data on the velocity and flux 
 behavior for different density environments \cite{Boltes,helbing3,seyfried1,seyfried}. 
@@ -112,20 +115,19 @@ diagram (flux $J$ versus density $\rho$) that highly dense crowds (seemingly up
 to $10\,$p~m$^{-2}$) do not drive the pedestrians velocity to zero, although the 
 reasons for this remain rather obscure.   \\
 
-\textcolor{red}{More recent measures of the fundamental diagram in an extremely dense
- situation show that, sometimes, the flux may increase with the density (Ref.~\cite{lohner1}). 
-This seems to contradict the results of Ref.~\cite{helbing3}. But both results seem 
+\textcolor{red}{More recent findings on the fundamental diagram for an extremely dense
+ situation show that, sometimes, the flux may increase with the density (see Ref.~\cite{lohner1}). 
+This seems to contradict the results of Ref.~\cite{helbing3}. But both results appear 
 not to be completely  comparable since data was acquired at different points, and thus,
-at different stages of the ritual. Ref.~\cite{lohner1}, indeed, stated that the fundamental 
+at different stages of the ritual. Ref.~\cite{lohner1}, indeed, states that the fundamental 
 diagram may strongly depend on the type of motion and the nature of the event.}\\
 
-\textcolor{red}{A lot of research has been done using data from the Mecca pilgrimage.
-Although in this work we focused on Ref.~\cite{helbing3}, there were several investigations 
-using real data to calibrate parameters of the PedFlow model developed by 
-L\"ohner et al. Ref.~\cite{lohner2}. Recently, a paper was published that uses 
-the Kalman filter ensemble to adjust the parameters of this model Ref.~\cite{Togashi1}. 
-For more information on PedFlow and Mecca pilgrimage measurements
-see Refs.~\cite{Boltes,Dridi1,Dridi2,Baqui1,lohner1} }\\
+
+\textcolor{red}{ Our work focuses on data from Ref.~\cite{helbing3}. 
+Further measurements can be found in Refs.~\cite{Boltes,Dridi1,Dridi2,Baqui1,lohner1}.
+The PedFlow model developed by L\"ohner \textit{et al}. Ref.~\cite{lohner2}  
+is an alternative to the Helbing model. Togashi \textit{et al}.  Ref.~\cite{Togashi1} 
+improved the calibration of this model using a Kalman filter ensemble. }\\
 
 The high density regime appears to be the most cumbersome one. Caution was 
 claimed when (automatically) transferring the usual ``calibrated'' parameters 
@@ -145,7 +147,7 @@ handling this matter requires a deep examination of the current SFM parameters.
 The net-time headway (roughly, the relaxation time) was first examined in 
 Ref.~\cite{johansson}. The author sustains the hypothesis that the 
 pedestrians net-time headway should increase until there is ``enough space to 
-make a step''.  He shows that a density dependent net-time headway is a 
+make a step''. He shows that a density dependent net-time headway is a 
 suitable parameter to smartly reproduce the empirical fundamental diagram for 
 highly dense crowds \cite{johansson}.  \\ 
 
@@ -166,10 +168,10 @@ high dense crowds. \\
 The investigation is organized as follows. We first recall the SFM in 
 Section~\ref{sfm}, while including the precise definitions for flux, density 
 and clustered structures. Section~\ref{simulations} presents our numerical 
-simulations for pedestrians moving through corridors. The corresponding results 
+simulations for pedestrians moving through corridors. The hypotheses of the 
+work are mentioned in Section~\ref{Hypotheses}. The corresponding results 
 are shown in Section~\ref{results}. Our main conclusions are detailed in the 
 closing Section~\ref{conclusions}.\\     
-
 
 \section{\label{background}Background}
 
@@ -245,8 +247,8 @@ m_i\,\displaystyle\frac{d\mathbf{v}^{(i)}}{dt}=\mathbf{f}_d^{(i)}
 j=1}^{N}\mathbf{f}_g^{(ij)},\label{eq_mov}
 \end{equation}
 
-where the subscript $j$ represents all the other pedestrians 
-(excluding $i$).\\
+where the subscript $j$ represents all the other pedestrians or walls
+(excluding pedestrian $i$).\\
 
 In the original model, there is no distinction between the friction coefficient of pedestrian-pedestrian interaction and pedestrian-wall interaction. Both interactions are modeled with the same constant estimated parameter $\kappa$. In this paper we analyze situations in which the friction coefficient may take different values. We define $\kappa_i$ and $\kappa_w$ as the friction coefficient related to the pedestrian-pedestrian interaction and the pedestrian-wall interaction, respectively. 
 
@@ -331,9 +333,9 @@ fixed according to Ref.~\cite{metric_handbook}. Initially, the individuals were
 randomly distributed along the corridor with a fixed global density 
 (\textcolor{red}{p~m$^{-2}$}) and with random initial velocities, resembling a 
 Gaussian distribution with null mean value. We explored global density values in 
-the range 1\textcolor{red}{p~m$^{-2}$}~$<\rho<$~9~\textcolor{red}{p~m$^{-2}$}. 
+the range 1~\textcolor{red}{p~m$^{-2}$}~$<\rho<$~9~\textcolor{red}{p~m$^{-2}$}. 
 We did not explore extreme densities (say $\rho>$9~\textcolor{red}{p~m$^{-2}$}) 
-because we exclude injuring situations. The number of pedestrians in the 
+because we excluded injuring situations. The number of pedestrians in the 
 simulation was given by the global density and the corridor dimensions chosen in 
 each case. \\
 
@@ -426,12 +428,15 @@ media exists \cite{helbing3}.\\
 We show that the experimental data (say, the flux-density diagram) can be 
 modeled under quasi-stationary conditions in the high density regime.\\
 
-\textcolor{red}{Our starting point is the re-examination of the (basic) SFM. 
-We propose a reduce-in-units equation of motion of the SFM. In this new picture,
-the social force $\mathbf{f}_s$ depends on an intensity $\mathcal{A}$, the granular
-force $\mathbf{f}_g$ depends on $\mathcal{K}$, and the desired force $\mathbf{f}_d$
-only depends on the target. In Section~\ref{appendix_1} we derivate this 
-reduce-in-units equation of motion and its corresponding control parameters ($\mathcal{A}$ and $\mathcal{K}$). }\\
+\textcolor{red}{Our starting point will be the re-examination of the (basic) SFM. 
+We propose a reduce-in-units equation of motion of the SFM (see Section~\ref{appendix_1} 
+for details). From this point of view, the parameter $A$ standing for the intensity of the
+ social force $\mathbf{f}_s$ is replaced by the reduced-in-units parameter $\mathcal{A}$.
+ The friction intensity $\kappa$ of the granular force $\mathbf{f}_g$ is replaced by the reduced-in-units
+ parameter $\mathcal{K}$. No other parameters are required in the reduced-in-units model
+ since $m$, $v_d$, $\tau$ and $B$ are all included in $\mathcal{A}$ and $\mathcal{K}$.
+ The desired force $\mathbf{f}_d$, indeed, will only depend on the target direction. In Section~\ref{appendix_1} we derivate the 
+reduce-in-units equation of motion and the meaning of the control parameters ($\mathcal{A}$ and $\mathcal{K}$). }\\
 
  We presume that physical contact is
 a key feature in dense crowds, despite the fact that other issues may
@@ -478,15 +483,11 @@ On the other hand, we have the congested branch  for $\rho > 5$. Here we face tw
 \item[(ii)] For wide corridors (say $w > 15$) we see that the flow increases with density. This contradicts the typical behavior of the fundamental diagram.   
 \end{itemize}
 
-In the case of narrow corridors, both the simulated case and the empirical results converge to a constant flow value. It is remarkable that the system does not reach a freezing state such as the one reported in Refs.\cite{kwak,lin}. Recall that our simulations do not include any respect factor (see Ref.\cite{parisi2}), or changes in the net-time headway (Ref.\cite{helbing3}), or the urge to see an attraction (Ref.\cite{kwak}). We assume a well defined target and the same $v_d$ for all the pedestrians.\\
+In the case of narrow corridors, both the simulated case and the empirical results converge to a constant flow value. It is remarkable that the system does not reach a freezing state such as the one reported in Refs.~\cite{kwak,lin}. Recall that our simulations do not include any respect factor (see Ref.~\cite{parisi2}), or changes in the net-time headway (Ref.~\cite{helbing3}), or the urge to see an attraction (Ref.~\cite{kwak}). We assume a well defined target and the same $v_d$ for all the pedestrians.\\
 
-The inset in Fig.~\ref{fundamental_diagram_flow} corresponds to the empirical data from Helbing (\cite{helbing3}). at the entrance of the Jamaraat bridge (the corridor width was $w=22$~m). Notice that our simulated results corresponding to a $w=22$~m corridor, exhibit a different behavior along the congested regime. In the simulated case, the flow increases even for the greatest explored density. On the contrary, the empirical data exhibit a flow reduction for $\rho > 5$ until reaching a plateau for the highest explored density values.  \\
+The inset in Fig.~\ref{fundamental_diagram_flow} corresponds to the empirical data from Helbing (see Ref.~\cite{helbing3}). at the entrance of the Jamaraat bridge (the corridor width was $w=22$~m). Notice that our simulated results corresponding to a $w=22$~m corridor, exhibit a different behavior along the congested regime. In the simulated case, the flow increases even for the greatest explored density. On the contrary, the empirical data exhibit a flow reduction for $\rho > 5$ until reaching a plateau for the highest explored density values.  \\
 
 In order to fulfill the experimental fundamental diagram, it becomes necessary that the flow at the maximum explored density ($\rho_{max} = 9$) does not exceed the flow at $\rho = 5$ (upper bound). That is:  $J(\rho = 9) < J(\rho = 5)$. From the flow definition in Eq.~(\ref{ec-flow}) we can derive the bounding values
-
-%\begin{align*} 
-%v(\rho_{max}) &< \frac{5v_d}{\rho_{max}} \leq \frac{5}{9} v_d\\
-%\end{align*}
 
 \begin{equation}
 \textcolor{red}{v(\rho_{max}) < \frac{5v_d}{\rho_{max}} \leq \frac{5}{9} v_d}\\
@@ -545,7 +546,7 @@ Fig.~\ref{speed-profile-width-normaliz} exhibits the scaled velocity profile. Th
 \caption{\label{speed-profile-width-normaliz} Scaled velocity profile (normalized velocity) vs. $y$-location for different corridors width (see legend for the corresponding widths) and two different densities. Empty markers correspond to $\rho=6$ while filled markers correspond to  $\rho=9$. The simulated corridor was 28~m length. Pedestrians walk from left to right with periodic boundary condition in the $x$-direction. Initially, pedestrians were randomly distributed. The horizontal axis is normalized by the corridor width, the vertical axis is normalized by the maximum velocity reached in each case.  The bin size was 1~m for all cases except for $w=4$~m since the bin was 0.5~m.}
 \end{figure}
 
-We want to mention that there is a clear relation between $v_{max}$ and the corridor width. That is, the wider the corridor, the higher the maximum reached velocity. (Fig.~\ref{speed-profile-width-normaliz} does not exhibit this behavior because the velocity is normalized by $v_{max}$).\\
+We want to mention that there is a clear relation between $v_{max}$ and the corridor width. That is, the wider the corridor, the higher the maximum reached velocity (Fig.~\ref{speed-profile-width-normaliz} does not exhibit this behavior because the velocity is normalized by $v_{max}$).\\
 
 In summary, the scaled velocity profile (see Fig.~\ref{speed-profile-width-normaliz}) does not report any relevant difference as the corridor widens (withing the high density regime). This suggests that the pedestrian dynamics remain essentially the same. The maximum attainable velocity ($v_{max}$), however, seems to be a sensible parameter with respect to the flux.  The narrow corridors attain lower values of $v_{max}$ and thus lower flux. We may expect the flow not to increase if $v_{max}$ remains low enough along the explored density range.\\
 
@@ -880,7 +881,7 @@ two coefficients is increased. Notice that there is not a big difference between
 \centering
 \includegraphics[width=0.7\columnwidth]
 {./fracc_clusteriz_vs_density.eps}
-\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m~s$^{-1}$. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
+\caption{\label{fic} Fraction of clustered individuals as a function of the density. Squared symbols correspond to $\kappa_w=\kappa_i=2.4\times 10^6$, circles to $\kappa_i=2.4\times 10^6$ and $\kappa_w=2.4\times 10^5$, triangles to $\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^6$ and crosses to the coefficients of the original Social Force Model ($\kappa_i=2.4\times 10^5$ and $\kappa_w=2.4\times 10^5$). The pedestrians walk across a corridor with $v_d=1$m~s$^{-1}$. The measurements were recorded every 0.5~s once the system reached the stationary state. The values corresponding to the fraction of clustered individuals were averaged over 170~s. The cluster cutoff distance was 0.46~m (equivalent to the shoulder width of the pedestrians).}
 \end{figure}
 
 Two main conclusions can be outlined from the above
@@ -897,7 +898,7 @@ clustered or ``caged" in a clustered environment.\\
 \section{\label{conclusions}Conclusions}
 
 Our investigation focused on the fundamental diagram in the context of the 
-social force model. We compared empirical data recorded at 
+Social Force Model. We compared empirical data recorded at 
 the entrance of the Jamaraat bridge (see Ref.~\cite{helbing3}) with our own SFM 
 simulations. We observed  that the  social force model in its 
 original version does not fit into the empirical fundamental 
@@ -908,7 +909,7 @@ conclusion that either increasing the friction coefficient or increasing the
 relaxation time may be the key for achieving a non-increasing 
 flow in the congested regime of the fundamental diagram. The 
 latter has already been explored in Ref.~\cite{johansson} and a 
-similar idea was introduced in Ref.\cite{parisi2}. We noticed, 
+similar idea was introduced in Ref.~\cite{parisi2}. We noticed, 
 though, that both approaches are equivalent since both affect 
 the reduced-in-units equation of motion in a similar fashion.\\
 
@@ -969,9 +970,9 @@ y T\'ecnicas - CONICET, Argentina) grant Programaci\'on Cient\'\i fica 2018 (UBA
 \section{\label{appendix_3} Testing out previous results}
 
 
-In this Appendix we show that the friction modification does not alter already studied behaviors of pedestrian dynamics (see Refs.~\cite{Dorso1,Dorso2,Dorso3}). In order to check this out, we performed numerical simulations of a room of 225 pedestrian escaping through a narrow door (bottleneck enclosure). The evacuation time (clearance time) $t_e$ is a function of the desired velocity $v_d$. This function has a minimum such that below it, $t_e$ is a decreasing function of $v_d$ while above, the tendency is reversed. It means that the evacuation process is optimum at moderated $v_d$ . This is a well known phenomenon called the Faster-is-Slower effect. This effect was reported in numerical simulations \cite{Dorso1,Dorso5} and it has also experimental support \cite{parisi1}. \\
+In this Appendix we show that the friction modification does not alter already studied behaviors of pedestrian dynamics (see Refs.~\cite{Dorso1,Dorso2,Dorso3}). In order to check this out, we performed numerical simulations of a room of 225 pedestrian escaping through a narrow door (bottleneck enclosure). The evacuation time (clearance time) $t_e$ is a function of the desired velocity $v_d$. This function has a minimum such that below it, $t_e$ is a decreasing function of $v_d$ while above, the tendency is reversed. It means that the evacuation process is optimum at moderated $v_d$. This is a well known phenomenon called the Faster-is-Slower effect. This effect was reported in numerical simulations \cite{Dorso1,Dorso5} and it has also experimental support \cite{parisi1}. \\
 
-In Fig.~\ref{fis} we show the evacuation time as a function of the desired velocity corresponding to a friction coefficient ten times grater than the friction coefficient of the original Social Force Model (\textit{i.e.} now $\kappa=2.4\times 10^{6}$). We can see that this modification preserves the Faster-is-Slower effect (and the Faster-is-faster effect). The inset exhibits the evacuation time as a function of the desired velocity with the friction coefficient of the original model ($\kappa=2.4\times 10^{5}$).\\
+In Fig.~\ref{fis} we show the evacuation time as a function of the desired velocity corresponding to a friction coefficient ten times grater than the friction coefficient of the original Social Force Model (\textit{i.e.} now $\kappa=2.4\times 10^{6}$). We can see that this modification preserves the Faster-is-Slower effect (and the Faster-is-Faster effect). The inset exhibits the evacuation time as a function of the desired velocity with the friction coefficient of the original model ($\kappa=2.4\times 10^{5}$).\\
 
 Another pedestrian dynamics phenomenon is the lane formation reported in bidirectional flows \cite{feliciani1,helbing5,guo1,qiao1}. This means, individuals spontaneously organize in lanes of uniform walking direction, if the pedestrian density is high enough. One of the major achievements of the Social Force Model is its ability to reproduced this emergent phenomenon in which the microscopic interactions between pedestrians is enough to produce a global pattern. We run a bidirectional flow simulation (not shown) and verified that the friction increment still reproduces the lane formation process.\\  
 
@@ -982,7 +983,7 @@ Another pedestrian dynamics phenomenon is the lane formation reported in bidirec
 \caption{\label{fis} Mean evacuation time (seconds) vs. the pedestrian’s desired velocity (m~s$^{-1}$). The room was 20 m $\times$ 20 m size. Mean values were computed from 30 evacuation processes. The pedestrians were initially placed in a regular square arrangement along the room with random velocities, resembling a Gaussian distribution with null mean value. The friction coefficient was $\kappa=2.4\times10^{6}$. The inset shows the evacuation time vs the desired velocity for the friction coefficient corresponding to the original model ($\kappa=2.4\times10^{5}$).  }
 \end{figure}
 
-Fig.~\ref{rate_fis} exhibits the ratio between the evacuation time with for the friction modified model and the evacuation time for the original model. This ratio is shown as a function of the desired velocity. As the desired velocity increases, the rate of evacuation times approaches a constant value $\sim$ 9. This result is in agreement with the formula Eq.(9) in Ref.\cite{sticco}. The friction force dominates in the range of high desired velocities since it promotes the collisions between pedestrians. within this regime, the Eq. (9) of  Ref. \cite{sticco} becomes a good approximation of the evacuation time. Thus, it is reasonable that dividing $t_e$ (for the enhanced friction) by $t_e$ (for the original model) yields a constant value for high $v_d$.  
+Fig.~\ref{rate_fis} exhibits the ratio between the evacuation time for the friction modified model and the evacuation time for the original model. This ratio is shown as a function of the desired velocity. As the desired velocity increases, the rate of evacuation times approaches a constant value $\sim$ 9. This result is in agreement with the formula Eq.~(9) in Ref.~\cite{sticco}. The friction force dominates in the range of high desired velocities since it promotes the collisions between pedestrians. within this regime, the Eq. (9) of  Ref.~\cite{sticco} becomes a good approximation of the evacuation time. Thus, it is reasonable that dividing $t_e$ (for the enhanced friction) by $t_e$ (for the original model) yields a constant value for high $v_d$.  
 
 \begin{figure}[htbp!]
 \centering
@@ -1028,7 +1029,7 @@ We also tested the situation in which $k_i=2.4\times 10^{6}$ and $k_w=0$. We obt
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
- \bibitem{Okazaki}
+ \bibitem[Okazaki (1979)]{Okazaki}
 \textcolor{red}{Okazaki, S., 1979. A study of pedestrian movement in 
 architectural space, Part 
 1: pedestrian movement by the application of magnetic model. Trans. A.I.J. 283, 
