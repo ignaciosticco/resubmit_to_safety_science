@@ -116,24 +116,26 @@ to $10\,$p~m$^{-2}$) do not drive the pedestrians velocity to zero, although the
 reasons for this remain rather obscure.   \\
 
 \textcolor{red}{More recent findings on the fundamental diagram for an extremely dense
- situation show that, sometimes, the flux may increase with the density (see Ref.~\cite{lohner1}). 
-This seems to contradict the results of Ref.~\cite{helbing3}. But both results appear 
-not to be completely  comparable since data was acquired at different points, and thus,
+ situation show that, sometimes, the flux may increase with the density (see 
+Ref.~\cite{lohner1}). This seems to contradict the results of 
+Ref.~\cite{helbing3}. But both results appear not to be completely  comparable 
+since data was acquired at different points, and thus,
 at different stages of the ritual. Ref.~\cite{lohner1}, indeed, states that the fundamental 
 diagram may strongly depend on the type of motion and the nature of the event.}\\
 
 
-\textcolor{red}{ Our work focuses on data from Ref.~\cite{helbing3}. 
-Further measurements can be found in Refs.~\cite{Boltes,Dridi1,Dridi2,Baqui1,lohner1}.
+\textcolor{red}{Our work focuses on data from Ref.~\cite{helbing3}. 
+Further measurements can be found in 
+Refs.~\cite{Boltes,lohner1,Dridi1,Dridi2,Baqui1}.
 The PedFlow model developed by L\"ohner \textit{et al}. Ref.~\cite{lohner2}  
-is an alternative to the Helbing model. Togashi \textit{et al}.  Ref.~\cite{Togashi1} 
-improved the calibration of this model using a Kalman filter ensemble. }\\
+is an alternative to the Helbing model. Togashi \textit{et al}. improved the 
+calibration of this model using a Kalman filter ensemble \cite{Togashi1}. }\\
 
 The high density regime appears to be the most cumbersome one. Caution was 
 claimed when (automatically) transferring the usual ``calibrated'' parameters 
 of the SFM to this regime. It was argued that the pedestrians' body size 
 distribution and the ``situational context'' are somewhat responsible for the 
-unexpected departure from these parameters \cite{johansson1,kwak}. But other 
+unexpected departure from these parameters \cite{kwak,johansson1}. But other 
 researchers pointed out that this departure actually expresses the lack of a 
 mechanism to properly handle the pedestrians' ``required space to move''. Some 
 modifications to the basic SFM were then proposed to overcome this difficulty 
@@ -254,7 +256,12 @@ In the original model, there is no distinction between the friction coefficient 
 
 \subsection{\label{fundamental-diagram} Fundamental Diagram}
 
-Inspired from vehicular traffic dynamic studies, many researches on pedestrian dynamics focus their attention on the relation between the flow and the density of a moving crowd. This relation is represented by ``fundamental diagram" and it has become one of the most common ways to characterize the pedestrians' dynamics along a corridor in unidirectional and bidirectional flows \cite{fruin1,mori1,polus1,seyfried1,jelic1}. \\
+Inspired from vehicular traffic dynamic studies, many researches on pedestrian 
+dynamics focus their attention on the relation between the flow and the density 
+of a moving crowd. This relation is represented by ``fundamental diagram" and it 
+has become one of the most common ways to characterize the pedestrians' dynamics 
+along a corridor in unidirectional and bidirectional flows 
+\cite{seyfried1,fruin1,mori1,polus1,jelic1}. \\
 
 We follow the same definition as in Ref.~\cite{helbing3} regarded to the fundamental diagram analysis. That is, we mean by the local density at place $\vec{r}=(x,y)$ and time $t$ the following expression
 
@@ -375,8 +382,8 @@ coefficient $\kappa$. \\
 
 We implemented special modules in C++ for upgrading the LAMMPS 
 capabilities to attain the Social Force Model simulations. We also checked over 
-the LAMMPS output with previous computations (see Refs. \cite{Dorso1, 
-Dorso2,Dorso3, Dorso4,Dorso6}).\\
+the LAMMPS output with previous computations (see Refs. \cite{Dorso2, 
+Dorso1,Dorso3, Dorso4,Dorso6}).\\
 
 The measurements were taken once the system reached the 
 stationary state ($t=30$~s), while the configurations of the systems were 
@@ -563,7 +570,13 @@ Once the work on every pedestrian is calculated, we proceed to bin the corridor 
 
 In the three figures we observe a similar pattern: the regions near the walls (bottom and top) are the most dissipative ones. The center of the corridor is though not a very dissipative region. Furthermore, the work seems to increase with the corridor width. This occurs because the relative velocity between pedestrians is greater in the wide corridors than in narrow ones. The wider the corridor, the greater the slope (corresponding to locations near the wall).\\
 
-Recall from Eq.(\ref{granular}), that the friction force depends on the compression and the relative velocity among pedestrians. The compression levels remain the same in the three cases since the compression only depends on the density (which is fix at $\rho=6$ for the three color maps). Thus, the differences between Figs.~\ref{abswg_width10}, \ref{abswg_width15} and \ref{abswg_width22} can only explained by the increment of the relative velocity between individuals. \\
+Recall from Eq.~(\ref{granular}), that the friction force depends on the 
+compression and the relative velocity among pedestrians. The compression levels 
+remain the same in the three cases since the compression only depends on the 
+density (which is fix at $\rho=6$ for the three color maps). Thus, the 
+differences between Figs.~\ref{abswg_width10}, \ref{abswg_width15} and 
+\ref{abswg_width22} can only explained by the increment of the relative velocity 
+between individuals. \\
 
 \begin{figure}[!htbp]
 \centering
@@ -722,7 +735,7 @@ scenario. The $\alpha=0$ scenario is expected to occur, however, for densities
 below a contacting threshold. \\
 
 A boundary condition needs to be imposed in order to solve 
-Eqs.~(\ref{eqn_appendix_2:3}) for $\alpha\neq 0$. We fix 
+Eq.~(\ref{eqn_appendix_2:3}) for $\alpha\neq 0$. We fix 
 $v_i=v_{i+1}$ at the middle of the corridor since the velocity profile 
 should be symmetrically distributed with respect to the mid-axis of the 
 corridor. Fig.~\ref{fig:appendix_2:1} shows the computed mean velocity for the 
@@ -771,7 +784,7 @@ assuming $\rho_0=1$ for simplicity. \\
 \caption{\label{fig:appendix_2:2} Mean flux of the bottom half of the 
 individuals vs. the pedestrian (global) density $\rho$ (see text for details). 
 Both axis are dimensionless. The number of individuals across the 
-corridor was set to $N=10$, and the contacting threshold was set to $\rho_0=1$. 
+corridor was set to $N=10$ and the contacting threshold was set to $\rho_0=1$. 
 The ``packing coefficient'' was set to $c=1/\mathcal{K}$ (and thus, making the 
 term $c\alpha$ independent of friction). The dashed line corresponds to the 
 flux at the low density regime (say, $\langle v_i\rangle=1$).   }
@@ -816,7 +829,12 @@ Recall that other authors address the ``congested regime problem" by modifying d
 
 We claim that in real scenarios, a combination of all these factors may be the cause of the marked flow reduction that portray the fundamental diagram. The pedestrians path can be very complex even if it is a simple enclosure (straight corridor) and the target is well defined (unidirectional flow). Beyond the complexities given by the internal motivations of pedestrians, we strongly suggest studying and modeling coefficients of friction between individuals and the friction with the walls. These two parameters have shown to be very important in the pedestrian dynamics and deserve a closer inspection in future research.\\
 
-We want to emphasize that the proposals stated in Refs.~\cite{parisi2,johansson,kwak}  only apply under normal conditions. If a crowd is under high levels of anxiety, pedestrians will neither keep distance between each other, nor will feel the urge to see an ``attraction". Thus, studying the friction coefficients may be a critical factor to properly reproduce the dynamics of a massive evacuation under stress.\\
+We want to emphasize that the proposals stated in 
+Refs.~\cite{kwak,parisi2,johansson}  only apply under normal conditions. 
+If a crowd is under high levels of anxiety, pedestrians will neither keep 
+distance between each other, nor will feel the urge to see an ``attraction". 
+Thus, studying the friction coefficients may be a critical factor to properly 
+reproduce the dynamics of a massive evacuation under stress.\\
 
 With all these insights, we can say that the narrow corridors have no drawback in the fitting of the flow vs. density relation because very high velocities are not attainable. This happens because in narrow corridors, the friction of the walls has a lot of ``relative weight" in the overall friction of the system. 
 The friction exerted by the walls is fundamental in order to produce the parabolic shape of the velocity profile. The walls provide friction force in the opposite direction to the speed of the individual (drag backwards), since they act like a fixed pedestrian. In other ways, friction between pedestrians can produce either drag forward or drag backwards depending on the contacting pedestrians velocities (see Eq.~\ref{granular}).\\
@@ -970,11 +988,28 @@ y T\'ecnicas - CONICET, Argentina) grant Programaci\'on Cient\'\i fica 2018 (UBA
 \section{\label{appendix_3} Testing out previous results}
 
 
-In this Appendix we show that the friction modification does not alter already studied behaviors of pedestrian dynamics (see Refs.~\cite{Dorso1,Dorso2,Dorso3}). In order to check this out, we performed numerical simulations of a room of 225 pedestrian escaping through a narrow door (bottleneck enclosure). The evacuation time (clearance time) $t_e$ is a function of the desired velocity $v_d$. This function has a minimum such that below it, $t_e$ is a decreasing function of $v_d$ while above, the tendency is reversed. It means that the evacuation process is optimum at moderated $v_d$. This is a well known phenomenon called the Faster-is-Slower effect. This effect was reported in numerical simulations \cite{Dorso1,Dorso5} and it has also experimental support \cite{parisi1}. \\
+In this Appendix we show that the friction modification does not alter already 
+studied behaviors of pedestrian dynamics (see 
+Refs.~\cite{Dorso2,Dorso1,Dorso3}). In order to check this out, we performed 
+numerical simulations of a room of 225 pedestrian escaping through a narrow door 
+(bottleneck enclosure). The evacuation time (clearance time) $t_e$ is a function 
+of the desired velocity $v_d$. This function has a minimum such that below it, 
+$t_e$ is a decreasing function of $v_d$ while above, the tendency is reversed. 
+It means that the evacuation process is optimum at moderated $v_d$. This is a 
+well known phenomenon called the Faster-is-Slower effect. This effect was 
+reported in numerical simulations \cite{Dorso1,Dorso5} and it has also 
+experimental support \cite{parisi1}. \\
 
 In Fig.~\ref{fis} we show the evacuation time as a function of the desired velocity corresponding to a friction coefficient ten times grater than the friction coefficient of the original Social Force Model (\textit{i.e.} now $\kappa=2.4\times 10^{6}$). We can see that this modification preserves the Faster-is-Slower effect (and the Faster-is-Faster effect). The inset exhibits the evacuation time as a function of the desired velocity with the friction coefficient of the original model ($\kappa=2.4\times 10^{5}$).\\
 
-Another pedestrian dynamics phenomenon is the lane formation reported in bidirectional flows \cite{feliciani1,helbing5,guo1,qiao1}. This means, individuals spontaneously organize in lanes of uniform walking direction, if the pedestrian density is high enough. One of the major achievements of the Social Force Model is its ability to reproduced this emergent phenomenon in which the microscopic interactions between pedestrians is enough to produce a global pattern. We run a bidirectional flow simulation (not shown) and verified that the friction increment still reproduces the lane formation process.\\  
+Another pedestrian dynamics phenomenon is the lane formation reported in 
+bidirectional flows \cite{helbing5,feliciani1,guo1,qiao1}. This means, 
+individuals spontaneously organize in lanes of uniform walking direction, if the 
+pedestrian density is high enough. One of the major achievements of the Social 
+Force Model is its ability to reproduced this emergent phenomenon in which the 
+microscopic interactions between pedestrians is enough to produce a global 
+pattern. We run a bidirectional flow simulation (not shown) and verified that 
+the friction increment still reproduces the lane formation process.\\  
 
 \begin{figure}[htbp!]
 \centering
@@ -983,7 +1018,16 @@ Another pedestrian dynamics phenomenon is the lane formation reported in bidirec
 \caption{\label{fis} Mean evacuation time (seconds) vs. the pedestrian’s desired velocity (m~s$^{-1}$). The room was 20 m $\times$ 20 m size. Mean values were computed from 30 evacuation processes. The pedestrians were initially placed in a regular square arrangement along the room with random velocities, resembling a Gaussian distribution with null mean value. The friction coefficient was $\kappa=2.4\times10^{6}$. The inset shows the evacuation time vs the desired velocity for the friction coefficient corresponding to the original model ($\kappa=2.4\times10^{5}$).  }
 \end{figure}
 
-Fig.~\ref{rate_fis} exhibits the ratio between the evacuation time for the friction modified model and the evacuation time for the original model. This ratio is shown as a function of the desired velocity. As the desired velocity increases, the rate of evacuation times approaches a constant value $\sim$ 9. This result is in agreement with the formula Eq.~(9) in Ref.~\cite{sticco}. The friction force dominates in the range of high desired velocities since it promotes the collisions between pedestrians. within this regime, the Eq. (9) of  Ref.~\cite{sticco} becomes a good approximation of the evacuation time. Thus, it is reasonable that dividing $t_e$ (for the enhanced friction) by $t_e$ (for the original model) yields a constant value for high $v_d$.  
+Fig.~\ref{rate_fis} exhibits the ratio between the evacuation time for the 
+friction modified model and the evacuation time for the original model. This 
+ratio is shown as a function of the desired velocity. As the desired velocity 
+increases, the rate of evacuation times approaches a constant value $\sim$ 9. 
+This result is in agreement with the formula Eq.~(9) in Ref.~\cite{sticco}. The 
+friction force dominates in the range of high desired velocities since it 
+promotes the collisions between pedestrians. within this regime, the Eq. (9) of  
+Ref.~\cite{sticco} becomes a good approximation of the evacuation time. Thus, it 
+is reasonable that dividing $t_e$ (for the enhanced friction) by $t_e$ (for the 
+original model) yields a constant value for high $v_d$.  \\ 
 
 \begin{figure}[htbp!]
 \centering
@@ -1029,62 +1073,16 @@ We also tested the situation in which $k_i=2.4\times 10^{6}$ and $k_w=0$. We obt
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+  \bibitem{Hirai}
+\textcolor{red}{Hirai, K., and Tarui, K., 1975. A simulation of the behavior of 
+a crowd in panic, Proceedings of the 1975 International
+Conference on Cybernetics Society, pp. 409-411}
+  
  \bibitem[Okazaki (1979)]{Okazaki}
 \textcolor{red}{Okazaki, S., 1979. A study of pedestrian movement in 
 architectural space, Part 
 1: pedestrian movement by the application of magnetic model. Trans. A.I.J. 283, 
 111–119.}
-
-\bibitem{Hirai}
-\textcolor{red}{Hirai, K., and Tarui, K., 1975. A simulation of the behavior of 
-a crowd in panic, Proceedings of the 1975 International
-Conference on Cybernetics Society, pp. 409-411}
-
-\bibitem{Boltes}
-\textcolor{red}{Boltes, M., Zhang, J., Tordeux, A., Schadschneider A., Seyfried A., 
-2018. Empirical Results of Pedestrian and Evacuation Dynamics. In: Meyers R. 
-(eds) Encyclopedia of Complexity and Systems Science. Springer, Berlin, 
-Heidelberg}
-
-\bibitem{Dridi1}
-\textcolor{red}{Dridi, M. (2015) Pedestrian Flow Simulation Validation and
-Verification Techniques. Current Urban Studies, 3, 119-134.
-doi: 10.4236/cus.2015.32011.}
-
-\bibitem{Dridi2}
-\textcolor{red}{Dridi, M. (2015) Simulation of High Density Pedestrian Flow:
-A Microscopic Model. Open Journal of Modelling and Simulation,
-3, 81-95. doi: 10.4236/ojmsi.2015.33009.}
-
-\bibitem{Baqui1}
-\textcolor{red}{Baqui, M., and L\"ohner, R. "Real-time crowd safety
-and comfort management from CCTV images." Real-Time Image and Video Processing 2017.
-Vol. 10223. International Society for Optics and Photonics, 2017.}
-
-\bibitem{Togashi1}
-\textcolor{red}{Togashi, F., Misaka, T., L\"ohner, R., and Obayashi, S. (2018). 
-Using ensemble Kalman filter to determine parameters for computational crowd dynamics simulations. 
-Engineering Computations, 35(7), 2612-2628.}
-
-\bibitem{lohner2}
-\textcolor{red}{L\"ohner, R. "On the modeling of pedestrian motion." 
-Applied Mathematical Modelling 34.2 (2010): 366-382.}
-
-\bibitem{zhang1}
-\textcolor{red}{Zhang, X. L., Weng, W. G., Yuan, H. Y., and Chen, J. G. (2013). 
-Empirical study of a unidirectional dense crowd during a real mass event. 
-Physica A: Statistical Mechanics and its Applications, 392(12), 2781-2791.}
-
-\bibitem{johansson1}
-Johansson, A., Helbing, D. and Pradyumn K. Shukla, 2007. Specification of 
-the social force pedestrian model by evolutionary adjustment to video tracking 
-data, Advances in complex systems 10.supp02 271-288. 
-{\path{https://doi.org/10.1142/S0219525907001355}}
-
-\bibitem{johansson}
-Johansson, A., 2009. "Constant-net-time headway as a key mechanism behind 
-pedestrian flow dynamics." Physical review E 80 (2), 026120. 
-{\path{https://doi.org/10.1103/PhysRevE.80.026120}}
 
 \bibitem{Helbing1}
 Helbing, D., Farkas, I., and Vicsek, T., 2000. "Simulating dynamical 
@@ -1096,16 +1094,16 @@ Helbing, D., and Moln\'ar, P., 1995. "Social force model for pedestrian
 dynamics." Physical review E 51 (5), 4282. 
 {\path{https://doi.org/10.1103/PhysRevE.51.4282}}
 
-\bibitem{Dorso1}
-Parisi, D. R., and Dorso, C. O., 2005. "Microscopic dynamics of pedestrian 
-evacuation." Physica A: Statistical Mechanics and its Applications 354, 
-606-618. {\path{https://doi.org/10.1016/j.physa.2005.02.040}}
-
 \bibitem{Dorso2}
 Parisi, D. R., and Dorso, C. O., 2007. "Morphological and dynamical 
 aspects of the room evacuation process." Physica A: Statistical Mechanics and 
 its Applications 385 (1), 343-355. 
 {\path{https://doi.org/10.1016/j.physa.2007.06.033}}
+
+\bibitem{Dorso1}
+Parisi, D. R., and Dorso, C. O., 2005. "Microscopic dynamics of pedestrian 
+evacuation." Physica A: Statistical Mechanics and its Applications 354, 
+606-618. {\path{https://doi.org/10.1016/j.physa.2005.02.040}}
 
 \bibitem{Dorso3}
 Frank, G. A., and Dorso, C. O., 2011. "Room evacuation in 
@@ -1113,147 +1111,27 @@ the presence of an obstacle." Physica A: Statistical Mechanics and its
 Applications 390 (11), 2135-2145. 
 {\path{https://doi.org/10.1016/j.physa.2011.01.015}}
 
-\bibitem{Cornes1}
-Cornes, F. E., Frank, G. A., and Dorso, C. O., 2017. "High pressures in room 
-evacuation processes and a first approach to the dynamics around unconscious 
-pedestrians." Physica A: Statistical Mechanics and its Applications 484, 
-282-298. {\path{https://doi.org/10.1016/j.physa.2017.05.013}}
-
-\bibitem{parisi1}
-Pastor, J. M., Garcimart\'in, A., Gago, P. A., Peralta, J. P., 
-Mart\'in-Gómez, C., Ferrer, L. M., Maza, D., Parisi, D. R., Pugnaloni, L. A., 
-and Zuriguel, I, 2015. "Experimental proof of faster-is-slower in systems of 
-frictional particles flowing through constrictions." Physical Review E 92 (6), 
-062817. {\path{https://doi.org/10.1103/PhysRevE.92.062817}}
-
-\bibitem{Dorso4}
-Frank, G. A., and Dorso, C. O., 2015. "Evacuation under limited 
-visibility." International Journal of Modern Physics C 26.01, 1550005.
-{\path{https://doi.org/10.1142/S0129183115500059}}
-
 \bibitem{Dorso5}
 Sticco, I. M., Frank, G. A., and Dorso, C. O., 2017. "Room evacuation 
 through two contiguous exits." Physica A: Statistical Mechanics and its 
 Applications 474, 172-185. 
 {\path{https://doi.org/10.1016/j.physa.2017.01.079}}
 
+\bibitem{Cornes1}
+Cornes, F. E., Frank, G. A., and Dorso, C. O., 2017. "High pressures in room 
+evacuation processes and a first approach to the dynamics around unconscious 
+pedestrians." Physica A: Statistical Mechanics and its Applications 484, 
+282-298. {\path{https://doi.org/10.1016/j.physa.2017.05.013}}
+
+\bibitem{Dorso4}
+Frank, G. A., and Dorso, C. O., 2015. "Evacuation under limited 
+visibility." International Journal of Modern Physics C 26.01, 1550005.
+{\path{https://doi.org/10.1142/S0129183115500059}}
+
 \bibitem{Dorso6}
 Frank, G. A., and Dorso, C. O., 2016. "Panic evacuation of single pedestrians 
 and couples." International Journal of Modern Physics C 27.08, 1650091. 
 {\path{https://doi.org/10.1142/S0129183116500911}}
-
-\bibitem{plimpton}
-Plimpton, S., 1995. "Fast parallel algorithms for short-range molecular 
-dynamics." Journal of computational physics 117 (1), 1-19.
-{\path{https://doi.org/10.1006/jcph.1995.1039}}
-
-\bibitem{kwak}
-Kwak, J, Hang-Hyun, J., Luttinen, T., and Kosonen, L., 2017. "Jamming 
-transitions induced by an attraction in pedestrian flow." Physical Review E 96 
-(2), 022319.
-{\path{https://doi.org/10.1103/PhysRevE.96.022319}}
-
-\bibitem{parisi2}
-Parisi, D. R., Gilman, M., and Moldovan, H., 2009. "A modification of the 
-social force model can reproduce experimental data of pedestrian flows in normal 
-conditions." Physica A: Statistical Mechanics and its Applications 388 
-(17), 3600-3608.
-{\path{https://doi.org/10.1016/j.physa.2009.05.027}}
-
-\bibitem{helbing3}
-Helbing, D., Johansson, A., and Al-Abideen, H. Z., 2007. "Dynamics of crowd 
-disasters: An empirical study." Physical review E 75 (4), 046109.
-{\path{https://doi.org/10.1103/PhysRevE.75.046109}}
-
-\bibitem{fruin1}
-Smith, R. A., and Dickie, J. F., 1995. "Engineering for Crowd Safety.", 237-238.
-
-\bibitem{mori1}
-Mori, M., and Hiroshi T., 1987 "A new method for evaluation of level of 
-service in pedestrian facilities." Transportation Research Part A: General 
-21 (3), 223-234.
-{\path{https://doi.org/10.1016/0191-2607(87)90016-1}}
-
-\bibitem{polus1}
-Polus, A., Schofer J. L., and Ushpiz, A., 1983. "Pedestrian flow and level 
-of service." Journal of transportation engineering 109 (1), 46-56.
-{\path{https://doi.org/10.1061/(ASCE)0733-947X(1983)109:1(46)}}
-
-\bibitem{seyfried2}
-Seyfried, A., Steffen B., and Lippert, T., 2006. "Basics of modelling the 
-pedestrian flow." Physica A: Statistical Mechanics and its Applications 368 
-(1), 232-238.
-{\path{https://doi.org/10.1016/j.physa.2005.11.052}}
-
-\bibitem{seyfried1}
-Seyfried A., Steffen B., Klingsch W., Lippert T., and Boltes M. (2007). The 
-Fundamental Diagram of Pedestrian Movement Revisited — Empirical Results and 
-Modelling. In: Schadschneider A., P\"oschel T., K\"uhne R., Schreckenberg M., 
-Wolf D.E. (eds) Traffic and Granular Flow’05. Springer, Berlin, Heidelberg.
-
-\bibitem{seyfried}
-Seyfried, A., Boltes, M., K\"ahler, J., Klingsch, W., Portz, A., Rupprecht, 
-T., Schadschneider, A., Steffen, B. and Winkens, A., 2010. "Enhanced empirical 
-data for the fundamental diagram and the flow through bottlenecks." Pedestrian 
-and Evacuation Dynamics 2008. Springer, Berlin, Heidelberg. 145-156.
-{\path{https://doi.org/10.1007/978-3-642-04504-2\_11}}
-
-\bibitem{jelic1}
-Jeli\'c, Asja and Appert-Rolland, Cecile and Lemercier, Samuel and Pettre, 
-Julien, 2012. "Properties of pedestrians walking in line: Fundamental 
-diagrams." Physical Review E 85 (3), 036111.
-{\path{https://doi.org/10.1103/PhysRevE.85.036111}}
-
-\bibitem{metric_handbook}
-Littlefield, D. 2008. Metric handbook. Routledge.
-{\path{https://doi.org/10.4324/9780080557656}}
-
-\bibitem{sticco}
-Sticco, I. M., Cornes, F. E., Frank, G. A., and Dorso, C. O., 2017. "Beyond the 
-faster-is-slower effect." Physical Review E 96 (5), 052303.
-{\path{https://doi.org/10.1103/PhysRevE.96.052303}}
-
-\bibitem{helbing5}
-Helbing, D., Moln\'ar, P., Farkas, I. J., and Bolay, K., 2001. "Self-organizing 
-pedestrian movement." Environment and planning B: planning and design 
-28 (3), 361-383.
-{\path{https://doi.org/10.1068/b2697}}
-
-\bibitem{feliciani1}
-Feliciani, C, and Katsuhiro N., 2016. "Empirical analysis of the lane 
-formation process in bidirectional pedestrian flow." Physical Review E 94 
-(3), 032304.
-{\path{https://doi.org/10.1103/PhysRevE.94.032304}}
-
-\bibitem{guo1}
-Wei, G., Wang X., and Zheng, X., 2015. "Lane formation in pedestrian 
-counterflows driven by a potential field considering following and avoidance 
-behaviours." Physica A: Statistical Mechanics and its Applications 432, 87-101.
-{\path{https://doi.org/10.1016/j.physa.2015.03.020}}
-
-\bibitem{qiao1}
-Jing, Q., Lishan, S., Shi, Q., Jian, R.  and Xiaoming L., 2017. 
-"Reducing Bidirectional Pedestrian Conflict Based on Lane Formation Phenomenon 
-in Subway Corridors." Promet-Traffic\&Transportation 29 (5), 489-502.
-{\path{https://doi.org/10.7307/ptt.v29i5.2168}}
-
-\bibitem{Lakoba}
-Lakoba, T. I., Kaup, D. J., and Finkelstein, N. M., 2005. "Modifications of the 
-Helbing-Molnar-Farkas-Vicsek social force model for pedestrian evolution." 
-Simulation 81 (5), 339-352.
-{\path{https://doi.org/10.1177/0037549705052772}}
-
-\bibitem{colombi2017}
-Colombi, A., Scianna, M., and Alaia, A., 2017. "A discrete 
-mathematical model for the dynamics of a crowd of gazing pedestrians with and 
-without an evolving environmental awareness." Computational and Applied 
-Mathematics 36 (2), 1113-1141.
-{\path{https://doi.org/10.1007/s40314-016-0316-x}}
-
-\bibitem{lin}
-Peng, L., Ma, J. and Lo, S. 2016. "Discrete element crowd model for 
-pedestrian evacuation through an exit." Chinese Physics B 25 (3), 034501.
-{\path{https://doi.org/10.1088/1674-1056/25/3/034501}}
 
 \bibitem{koster1}
 \textcolor{red}{K\"oster}, G., Treml, F. and G\"odel, M., 2013. "Avoiding 
@@ -1272,6 +1150,141 @@ von Sivers, I., 2014. "Bridging the gap: From cellular automata to
 differential equation models for pedestrian dynamics." Journal of Computational 
 Science 5 (5), 841-846.{\path{https://doi.org/10.1016/j.jocs.2014.06.005}}
 
+\bibitem{Lakoba}
+Lakoba, T. I., Kaup, D. J., and Finkelstein, N. M., 2005. "Modifications of the 
+Helbing-Molnar-Farkas-Vicsek social force model for pedestrian evolution." 
+Simulation 81 (5), 339-352.
+{\path{https://doi.org/10.1177/0037549705052772}}
+
+\bibitem{Boltes}
+\textcolor{red}{Boltes, M., Zhang, J., Tordeux, A., Schadschneider A., Seyfried 
+A., 
+2018. Empirical Results of Pedestrian and Evacuation Dynamics. In: Meyers R. 
+(eds) Encyclopedia of Complexity and Systems Science. Springer, Berlin, 
+Heidelberg}
+
+\bibitem{helbing3}
+Helbing, D., Johansson, A., and Al-Abideen, H. Z., 2007. "Dynamics of crowd 
+disasters: An empirical study." Physical review E 75 (4), 046109.
+{\path{https://doi.org/10.1103/PhysRevE.75.046109}}
+
+\bibitem{seyfried1}
+Seyfried A., Steffen B., Klingsch W., Lippert T., and Boltes M. (2007). The 
+Fundamental Diagram of Pedestrian Movement Revisited — Empirical Results and 
+Modelling. In: Schadschneider A., P\"oschel T., K\"uhne R., Schreckenberg M., 
+Wolf D.E. (eds) Traffic and Granular Flow’05. Springer, Berlin, Heidelberg.
+
+\bibitem{seyfried}
+Seyfried, A., Boltes, M., K\"ahler, J., Klingsch, W., Portz, A., Rupprecht, 
+T., Schadschneider, A., Steffen, B. and Winkens, A., 2010. "Enhanced empirical 
+data for the fundamental diagram and the flow through bottlenecks." Pedestrian 
+and Evacuation Dynamics 2008. Springer, Berlin, Heidelberg. 145-156.
+{\path{https://doi.org/10.1007/978-3-642-04504-2\_11}}
+
+\bibitem{lohner1}
+\textcolor{red}{L\"ohner}, R., Muhamad, B., Dambalmath, P., and Haug, E., 2018. 
+"Fundamental diagrams for specific very high density crowds." Collective 
+Dynamics 2, 1-15.
+{\path{http://dx.doi.org/10.17815/CD.2017.13}}
+
+\bibitem{Dridi1}
+\textcolor{red}{Dridi, M. (2015) Pedestrian Flow Simulation Validation and
+Verification Techniques. Current Urban Studies, 3, 119-134.
+doi: 10.4236/cus.2015.32011.}
+
+\bibitem{Dridi2}
+\textcolor{red}{Dridi, M. (2015) Simulation of High Density Pedestrian Flow:
+A Microscopic Model. Open Journal of Modelling and Simulation,
+3, 81-95. doi: 10.4236/ojmsi.2015.33009.}
+
+\bibitem{Baqui1}
+\textcolor{red}{Baqui, M., and L\"ohner, R. "Real-time crowd safety
+and comfort management from CCTV images." Real-Time Image and Video Processing 2017.
+Vol. 10223. International Society for Optics and Photonics, 2017.}
+
+\bibitem{lohner2}
+\textcolor{red}{L\"ohner, R. "On the modeling of pedestrian motion." 
+Applied Mathematical Modelling 34.2 (2010): 366-382.}
+
+\bibitem{Togashi1}
+\textcolor{red}{Togashi, F., Misaka, T., L\"ohner, R., and Obayashi, S. (2018). 
+Using ensemble Kalman filter to determine parameters for computational crowd dynamics simulations. 
+Engineering Computations, 35(7), 2612-2628.}
+
+\bibitem{kwak}
+Kwak, J, Hang-Hyun, J., Luttinen, T., and Kosonen, L., 2017. "Jamming 
+transitions induced by an attraction in pedestrian flow." Physical Review E 96 
+(2), 022319.
+{\path{https://doi.org/10.1103/PhysRevE.96.022319}}
+
+\bibitem{johansson1}
+Johansson, A., Helbing, D. and Pradyumn K. Shukla, 2007. Specification of 
+the social force pedestrian model by evolutionary adjustment to video tracking 
+data, Advances in complex systems 10.supp02 271-288. 
+{\path{https://doi.org/10.1142/S0219525907001355}}
+
+\bibitem{parisi2}
+Parisi, D. R., Gilman, M., and Moldovan, H., 2009. "A modification of the 
+social force model can reproduce experimental data of pedestrian flows in 
+normal 
+conditions." Physica A: Statistical Mechanics and its Applications 388 
+(17), 3600-3608.
+{\path{https://doi.org/10.1016/j.physa.2009.05.027}}
+
+\bibitem{seyfried2}
+Seyfried, A., Steffen B., and Lippert, T., 2006. "Basics of modelling the 
+pedestrian flow." Physica A: Statistical Mechanics and its Applications 368 
+(1), 232-238.
+{\path{https://doi.org/10.1016/j.physa.2005.11.052}}
+
+\bibitem{johansson}
+Johansson, A., 2009. "Constant-net-time headway as a key mechanism behind 
+pedestrian flow dynamics." Physical review E 80 (2), 026120. 
+{\path{https://doi.org/10.1103/PhysRevE.80.026120}}
+
+\bibitem{colombi2017}
+Colombi, A., Scianna, M., and Alaia, A., 2017. "A discrete 
+mathematical model for the dynamics of a crowd of gazing pedestrians with and 
+without an evolving environmental awareness." Computational and Applied 
+Mathematics 36 (2), 1113-1141.
+{\path{https://doi.org/10.1007/s40314-016-0316-x}}
+
+\bibitem{fruin1}
+Smith, R. A., and Dickie, J. F., 1995. "Engineering for Crowd Safety.", 237-238.
+
+\bibitem{mori1}
+Mori, M., and Hiroshi T., 1987 "A new method for evaluation of level of 
+service in pedestrian facilities." Transportation Research Part A: General 
+21 (3), 223-234.
+{\path{https://doi.org/10.1016/0191-2607(87)90016-1}}
+
+\bibitem{polus1}
+Polus, A., Schofer J. L., and Ushpiz, A., 1983. "Pedestrian flow and level 
+of service." Journal of transportation engineering 109 (1), 46-56.
+{\path{https://doi.org/10.1061/(ASCE)0733-947X(1983)109:1(46)}}
+
+\bibitem{jelic1}
+Jeli\'c, Asja and Appert-Rolland, Cecile and Lemercier, Samuel and Pettre, 
+Julien, 2012. "Properties of pedestrians walking in line: Fundamental 
+diagrams." Physical Review E 85 (3), 036111.
+{\path{https://doi.org/10.1103/PhysRevE.85.036111}}
+
+\bibitem{metric_handbook}
+Littlefield, D. 2008. Metric handbook. Routledge.
+{\path{https://doi.org/10.4324/9780080557656}}
+
+%37
+
+\bibitem{plimpton}
+Plimpton, S., 1995. "Fast parallel algorithms for short-range molecular 
+dynamics." Journal of computational physics 117 (1), 1-19.
+{\path{https://doi.org/10.1006/jcph.1995.1039}}
+
+\bibitem{sticco}
+Sticco, I. M., Cornes, F. E., Frank, G. A., and Dorso, C. O., 2017. "Beyond the 
+faster-is-slower effect." Physical Review E 96 (5), 052303.
+{\path{https://doi.org/10.1103/PhysRevE.96.052303}}
+
 \bibitem{yu1}
 Yu, W, and Johansson, A., 2007. "Modeling crowd turbulence by many-particle 
 simulations." Physical review E 76 (4), 046105.
@@ -1283,19 +1296,60 @@ emergency planning guidance:‘Mass panic’ or collective resilience?." Resilie
 1 (1), 18-37.
 {\path{https://doi.org/10.1080/21693293.2013.765740}}
 
+\bibitem{lin}
+Peng, L., Ma, J. and Lo, S. 2016. "Discrete element crowd model for 
+pedestrian evacuation through an exit." Chinese Physics B 25 (3), 034501.
+{\path{https://doi.org/10.1088/1674-1056/25/3/034501}}
+
+\bibitem{zhang1}
+\textcolor{red}{Zhang, X. L., Weng, W. G., Yuan, H. Y., and Chen, J. G. (2013). 
+Empirical study of a unidirectional dense crowd during a real mass event. 
+Physica A: Statistical Mechanics and its Applications, 392(12), 2781-2791.}
+
+
+\bibitem{parisi1}
+Pastor, J. M., Garcimart\'in, A., Gago, P. A., Peralta, J. P., 
+Mart\'in-Gómez, C., Ferrer, L. M., Maza, D., Parisi, D. R., Pugnaloni, L. A., 
+and Zuriguel, I, 2015. "Experimental proof of faster-is-slower in systems of 
+frictional particles flowing through constrictions." Physical Review E 92 (6), 
+062817. {\path{https://doi.org/10.1103/PhysRevE.92.062817}}
+
+%43
+
+\bibitem{helbing5}
+Helbing, D., Moln\'ar, P., Farkas, I. J., and Bolay, K., 2001. "Self-organizing 
+pedestrian movement." Environment and planning B: planning and design 
+28 (3), 361-383.
+{\path{https://doi.org/10.1068/b2697}}
+
+\bibitem{feliciani1}
+Feliciani, C, and Katsuhiro N., 2016. "Empirical analysis of the lane 
+formation process in bidirectional pedestrian flow." Physical Review E 94 
+(3), 032304.
+{\path{https://doi.org/10.1103/PhysRevE.94.032304}}
+
+%35
+
+\bibitem{guo1}
+Wei, G., Wang X., and Zheng, X., 2015. "Lane formation in pedestrian 
+counterflows driven by a potential field considering following and avoidance 
+behaviours." Physica A: Statistical Mechanics and its Applications 432, 87-101.
+{\path{https://doi.org/10.1016/j.physa.2015.03.020}}
+
+\bibitem{qiao1}
+Jing, Q., Lishan, S., Shi, Q., Jian, R.  and Xiaoming L., 2017. 
+"Reducing Bidirectional Pedestrian Conflict Based on Lane Formation Phenomenon 
+in Subway Corridors." Promet-Traffic\&Transportation 29 (5), 489-502.
+{\path{https://doi.org/10.7307/ptt.v29i5.2168}}
+
+%40
+
 \bibitem{li1}
-Li, M., Zhao, Y/., He, L., Chen, W. and Xu, X. 
+Li, M., Zhao, Y., He, L., Chen, W. and Xu, X. 
 2015. "The parameter calibration and optimization of social force model for the 
 real-life 2013 Ya’an earthquake evacuation in China." Safety science 79, 
 243-253.
 {\path{https://doi.org/10.1016/j.ssci.2015.06.018}}
-
-\bibitem{lohner1}
-\textcolor{red}{L\"ohner}, R., Muhamad, B., Dambalmath, P., and Haug, E., 2018. 
-"Fundamental diagrams for specific very high density crowds." Collective 
-Dynamics 2, 1-15.
-{\path{http://dx.doi.org/10.17815/CD.2017.13}}
-
 
 \end{thebibliography}
 \end{document}
