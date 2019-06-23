@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.3.25)  22 JUN 2019 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.3.25)  22 JUN 2019 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1606,8 +1606,8 @@ Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 
 Underfull \hbox (badness 1442) in paragraph at lines 1088--1091
-[]\OT1/cmr/m/n/12 Helbing, D., Farkas, I., and Vic-sek, T., 2000. "Sim-u-lat-in
-g dy-
+[]\OT1/cmr/m/n/12 Helbing, D., Farkas, I., and Vic-sek, T., 2000. ``Sim-u-lat-i
+ng dy-
  []
 
 
@@ -1618,7 +1618,7 @@ Underfull \hbox (badness 3735) in paragraph at lines 1088--1091
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1093--1096
-[]\OT1/cmr/m/n/12 Helbing, D., and Moln^^Sar, P., 1995. "So-cial force model
+[]\OT1/cmr/m/n/12 Helbing, D., and Moln^^Sar, P., 1995. ``So-cial force model
  []
 
 
@@ -1629,8 +1629,8 @@ Underfull \hbox (badness 8000) in paragraph at lines 1093--1096
 
 
 Underfull \hbox (badness 3954) in paragraph at lines 1098--1102
-[]\OT1/cmr/m/n/12 Parisi, D. R., and Dorso, C. O., 2007. "Mor-pho-log-i-cal and
-
+[]\OT1/cmr/m/n/12 Parisi, D. R., and Dorso, C. O., 2007. ``Mor-pho-log-i-cal an
+d
  []
 
 
@@ -1652,8 +1652,8 @@ Underfull \hbox (badness 3407) in paragraph at lines 1154--1158
 
 
 Underfull \hbox (badness 5726) in paragraph at lines 1154--1158
-\OT1/cmr/m/n/12 "Mod-i-fi-ca-tions of the Helbing-Molnar-Farkas-Vicsek so-cial 
-force
+\OT1/cmr/m/n/12 ``Mod-i-fi-ca-tions of the Helbing-Molnar-Farkas-Vicsek so-cial
+ force
  []
 
 
@@ -1670,14 +1670,14 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-Underfull \hbox (badness 4967) in paragraph at lines 1191--1194
-\OT1/cmr/m/n/12 i-fi-ca-tion Tech-niques. Cur-rent Ur-ban Stud-ies, 3, 119-134.
- doi:
+Underfull \hbox (badness 3514) in paragraph at lines 1191--1194
+\OT1/cmr/m/n/12 i-fi-ca-tion Tech-niques". Cur-rent Ur-ban Stud-ies, 3, 119-134
+. doi:
  []
 
 [37]
 Underfull \hbox (badness 1292) in paragraph at lines 1227--1233
-[]\OT1/cmr/m/n/12 Parisi, D. R., Gilman, M., and Moldovan, H., 2009. "A mod-
+[]\OT1/cmr/m/n/12 Parisi, D. R., Gilman, M., and Moldovan, H., 2009. ``A mod-
  []
 
 
@@ -1723,8 +1723,8 @@ Underfull \hbox (badness 1275) in paragraph at lines 1279--1282
 
 
 Underfull \hbox (badness 2020) in paragraph at lines 1289--1292
-[]\OT1/cmr/m/n/12 Yu, W, and Jo-hans-son, A., 2007. "Mod-el-ing crowd tur-bu-le
-nce
+[]\OT1/cmr/m/n/12 Yu, W, and Jo-hans-son, A., 2007. ``Mod-el-ing crowd tur-bu-l
+ence
  []
 
 Missing character: There is no â in font cmr12!
@@ -1773,7 +1773,7 @@ onts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on paper.pdf (40 pages, 622412 bytes).
+Output written on paper.pdf (40 pages, 622464 bytes).
 PDF statistics:
  548 PDF objects out of 1000 (max. 8388607)
  451 compressed objects within 5 object streams
